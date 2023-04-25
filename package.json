@@ -1,6 +1,6 @@
 {
   "name": "musicworld",
-  "author": "Diego Do Santos (https://github.com/drumpy)",
+  "author": "Cristian Matos Richards (https://github.com/rcmtcristian)",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,8 +23,6 @@
   ],
   "dependencies": {
     "@barba/core": "^2.9.7",
-    "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^0.9.304",
     "gsap": "^3.11.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
