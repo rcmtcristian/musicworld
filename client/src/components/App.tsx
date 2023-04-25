@@ -3,7 +3,6 @@ import tailwindcss from '@/Assets/images/tailwindcss.svg'
 import typescript from '@/Assets/images/typescript.svg'
 import vercel from '@/Assets/images/vercel.svg'
 import vite from '@/Assets/images/vite.svg'
-import Spline from '@splinetool/react-spline'
 
 function App() {
   return (
