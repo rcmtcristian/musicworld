@@ -3,6 +3,7 @@ import tailwindcss from '@/Assets/images/tailwindcss.svg'
 import typescript from '@/Assets/images/typescript.svg'
 import vercel from '@/Assets/images/vercel.svg'
 import vite from '@/Assets/images/vite.svg'
+import { Application } from '@splinetool/runtime';
 
 function App() {
   return (
@@ -49,14 +50,11 @@ function App() {
                 <span id="title-shaping" className="left">
                   Mapping
                 </span>
-                <span className="" id="">
-                  svg
-                </span>
+                 <img src="client\src\assets\images\The.svg" className='svg-title' alt="the" />
                 <br />
                 <span className="">
-                  <span className=""> svg</span>
+                  <img src="client\src\assets\images\star-thicc.svg" className='svg-title star-ajust' alt="star" />
                   <span id="title-care">
-                    {' '}
                     <span className="left">Music World</span>
                   </span>
                 </span>
@@ -65,7 +63,6 @@ function App() {
             <section className="sub-second-section">
               <p>
                 <span className="accent-style">
-                  {' '}
                   Music world aims to provide easy access to finding similar music to your favorite
                   songs. We have a large database of songs and artist that you can search through to
                   find similar music to your favorite songs. we also have a database of artist that
@@ -128,7 +125,7 @@ function App() {
 
                         <text className="link-text">
                           <textPath href="#link-circle-alt" stroke="none">
-                            • you are wonderful • Pls sign up Now
+                            • you are wonderful • Start your journey
                           </textPath>
                         </text>
                       </svg>

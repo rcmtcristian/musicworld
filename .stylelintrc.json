@@ -2,7 +2,6 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recess-order",
-    "stylelint-config-html",
     "stylelint-config-prettier"
   ],
   "rules": {
@@ -11,6 +10,17 @@
       {
         "ignoreAtRules": ["tailwind", "value", "layer"]
       }
+    ],
+    "rule-empty-line-before": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": ["vendor-prefix"]
+      }
     ]
-  }
+  },
+  "processors": ["stylelint-processor-html"],
+  "customSyntax": "postcss-scss"
 }
