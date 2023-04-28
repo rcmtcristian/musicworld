@@ -3,9 +3,20 @@ import tailwindcss from '@/Assets/images/tailwindcss.svg'
 import typescript from '@/Assets/images/typescript.svg'
 import vercel from '@/Assets/images/vercel.svg'
 import vite from '@/Assets/images/vite.svg'
-import { Application } from '@splinetool/runtime';
+import { Application } from '@splinetool/runtime'
 
 function App() {
+  const canvas = document.getElementById('canvas3d')
+
+  if (canvas instanceof HTMLCanvasElement) {
+    const app = new Application(canvas)
+    app.load('client/src/assets/scenes/scene.splinecode')
+  } else {
+    console.error('Canvas element not found or is not an HTMLCanvasElement')
+  }
+
+  
+
   return (
     <main className=" min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800">
       {/* <main className="grid min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800"> */}
@@ -25,7 +36,7 @@ function App() {
           </canvas>
         </div>
       </div> */}
-
+      <canvas id="canvas3d"></canvas>
       <section className="main-section wrapper">
         <header>
           <nav>
@@ -50,10 +61,14 @@ function App() {
                 <span id="title-shaping" className="left">
                   Mapping
                 </span>
-                 <img src="client\src\assets\images\The.svg" className='svg-title' alt="the" />
+                <img src="client\src\assets\images\The.svg" className="svg-title" alt="the" />
                 <br />
                 <span className="">
-                  <img src="client\src\assets\images\star-thicc.svg" className='svg-title star-ajust' alt="star" />
+                  <img
+                    src="client\src\assets\images\star-thicc.svg"
+                    className="svg-title star-ajust"
+                    alt="star"
+                  />
                   <span id="title-care">
                     <span className="left">Music World</span>
                   </span>
