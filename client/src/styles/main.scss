@@ -328,6 +328,7 @@ input {
   justify-content: center;
   width: 100vw;
   height: 10vh;
+  text-align: center;
   background: #403832;
 
   p {
@@ -335,6 +336,16 @@ input {
       font: 0.9rem $font-family_4;
       color: $color_8;
     }
+  }
+
+  .footer-container-bottom,
+  a {
+    color: $color_8;
+    cursor: pointer;
+  }
+
+  a {
+    cursor: pointer;
   }
 }
 

@@ -294,12 +294,21 @@ input {
   justify-content: center;
   width: 100vw;
   height: 10vh;
+  text-align: center;
   background: #403832;
 }
 .footer-container p span {
   font: 0.9rem 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', geneva, verdana, sans-serif;
   color: #f7e9d6;
+}
+.footer-container .footer-container-bottom,
+.footer-container a {
+  color: #f7e9d6;
+  cursor: pointer;
+}
+.footer-container a {
+  cursor: pointer;
 }
 
 .form-control {
