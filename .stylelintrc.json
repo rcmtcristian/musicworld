@@ -19,7 +19,8 @@
       {
         "ignoreProperties": ["vendor-prefix"]
       }
-    ]
+    ],
+    "selector-class-pattern": null
   },
   "processors": ["stylelint-processor-html"],
   "customSyntax": "postcss-scss"

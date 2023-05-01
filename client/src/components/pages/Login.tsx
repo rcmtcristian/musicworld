@@ -1,26 +1,15 @@
 import Footer from '../Footer'
-
+import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react'
+import Nav from '../Nav'
 function Login() {
   return (
     <main data-barba="container" data-barba-namespace="home">
+      <Nav />
+
       <div className="container-two">
-        <div className="form-panel">
-          <h1>Login</h1>
-          <form action="/login" method="POST">
-            <div className="form-control">
-              <input type="email" name="email" required />
-              <label>Email</label>
-            </div>
-            <div className="form-control">
-              <input type="password" name="password" required />
-              <label>Password</label>
-            </div>
-            <input className="btn" type="submit" />
-            <p className="text">
-              Dont have an account? <a href="/signup">Register</a>
-            </p>
-          </form>
-        </div>
+        <SignedOut>
+          <SignIn />
+        </SignedOut>
         <div className="picture-panel" />
       </div>
       <Footer />

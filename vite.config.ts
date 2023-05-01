@@ -27,6 +27,14 @@ export default defineConfig({
           {
             name: 'CascadiaCodePL',
             src: './client/src/assets/fonts/*.woff2'
+          },
+          {
+            name: 'Gilroy',
+            src: './client/src/assets/fonts/*.woff2'
+          },
+          {
+            name: 'FHGiselle',
+            src: './client/src/assets/fonts/*.woff2'
           }
         ],
         display: 'swap',
