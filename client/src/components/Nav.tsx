@@ -12,7 +12,7 @@ function Nav() {
           {/* <a>Login</a> */}
         </li>
         <li>
-          <Link to="/singup">Signup</Link>
+          <Link to="/signup">Signup</Link>
           {/* <a href="/signup">Signup</a> */}
         </li>
         <li>
