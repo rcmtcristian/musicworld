@@ -6,6 +6,7 @@ $color_5: #776f8a;
 $color_6: var(-accent-color);
 $color_7: #fff;
 $color_8: #f7e9d6;
+$color_9: #524b4b;
 $textColor: #403832;
 $rotationDuration: 20s;
 $hoverDuration: 0.3s;
@@ -128,7 +129,7 @@ header nav li > a {
   display: inline-block;
   padding: 15px 20px;
   font-size: 0.8rem;
-  color: $color_2;
+  color: $color_8;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -143,7 +144,7 @@ header nav li > a::after {
   height: 2px;
   content: '';
   background: none repeat scroll 0 0 rgb(0 0 0 / 0%);
-  background: #524b4b;
+  background: $color_8;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 

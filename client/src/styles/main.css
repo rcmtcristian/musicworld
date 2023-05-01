@@ -101,7 +101,7 @@ header nav li > a {
   display: inline-block;
   padding: 15px 20px;
   font-size: 0.8rem;
-  color: #776f66;
+  color: #f7e9d6;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -116,7 +116,7 @@ header nav li > a::after {
   height: 2px;
   content: '';
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  background: #524b4b;
+  background: #f7e9d6;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 

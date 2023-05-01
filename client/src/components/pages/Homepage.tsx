@@ -41,6 +41,8 @@ function Homepage() {
       </div> */}
       <canvas id="canvas3d"></canvas>
       <section className="main-section wrapper">
+        <header />
+
         <main data-barba="container" data-barba-namespace="home">
           <section className="separator">
             <section className="sub-main-section ">
