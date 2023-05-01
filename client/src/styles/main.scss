@@ -7,6 +7,7 @@ $color_6: var(-accent-color);
 $color_7: #fff;
 $color_8: #f7e9d6;
 $color_9: #524b4b;
+$color_10: #db856a;
 $textColor: #403832;
 $rotationDuration: 20s;
 $hoverDuration: 0.3s;
@@ -117,9 +118,76 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.8em;
+  background-color: $color_1;
 }
 
+.artist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em;
+  background-color: $color_1;
+}
+
+.no-match p,
+h1 {
+  color: $color_7;
+}
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  font-size: 5rem;
+  text-align: center;
+  transform: translate(0%, -50%);
+}
+
+#title {
+  z-index: 3;
+  width: 50vw;
+  margin-top: -0.6em;
+  font-size: 6vw;
+  text-align: center;
+  pointer-events: none;
+  filter: blur(1px);
+  transition: opacity 1s ease;
+
+  .fancy {
+    font-size: 0.5em;
+    line-height: 0.9em;
+    color: $color_7;
+    filter: blur(1px);
+  }
+}
+
+.smile-container {
+  position: absolute;
+  top: 56.34em;
+  right: 0;
+  width: 40%;
+  height: 20%;
+  background-image: url('/client/src/assets/images/smile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 110%;
+  padding: 0 1rem;
+  margin-top: 5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #403832;
+  text-align: center;
+}
 header * {
   z-index: 8;
 }
@@ -218,7 +286,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -290,7 +358,16 @@ input {
 .picture-panel {
   width: 50vw;
   overflow-x: auto;
-  background: url('../images/1675985503892.png');
+  background: url('/client/src/assets/images/squares.png');
+  filter: blur(1px);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.picture-panel-2 {
+  width: 50vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: url('/client/src/assets/images/signup-panel.png');
   filter: blur(1px);
   background-repeat: no-repeat;
   background-size: cover;
@@ -318,6 +395,75 @@ input {
 
 .text {
   margin-top: 30px;
+}
+
+.cl-card {
+  display: flex;
+  width: 55em;
+  min-width: 5em;
+  height: 100%;
+  padding-top: 9em;
+  box-shadow: none;
+
+  .cl-header {
+    font: 0.9rem;
+    text-align: center;
+  }
+
+  .cl-headerTitle {
+    font-family: $font-family_4;
+    font-size: 2.5rem;
+  }
+
+  .cl-headerSubtitle {
+    font-family: $font-family_4;
+    font-size: 1.5rem;
+  }
+
+  .cl-formButtonPrimary {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-family: $font-family_4;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color_4;
+    cursor: pointer;
+    background-color: $background-color_1;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .cl-footer {
+    font-size: 1.5rem;
+  }
+  .cl-footerActionLink {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_10;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+  }
+  .cl-footerActionLink:hover {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_9;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cl-footerActionText {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_4;
+  }
+
+  .cl-logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 }
 
 .footer-container {

@@ -1,5 +1,6 @@
 import { Application } from '@splinetool/runtime'
 import Footer from '../Footer'
+import Nav from '../Nav'
 
 // import react from '@/Assets/images/react.svg'
 // import tailwindcss from '@/Assets/images/tailwindcss.svg'
@@ -22,6 +23,7 @@ function Homepage() {
 
   return (
     <main className=" min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800">
+      <Nav />
       {/* <main className="grid min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800"> */}
       <ul className="transition">
         <li>loading</li>

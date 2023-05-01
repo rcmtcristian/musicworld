@@ -1,35 +1,30 @@
 import Footer from '../Footer'
-
+import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react'
+import Nav from '../Nav'
 function Signup() {
   return (
     <main data-barba="container" data-barba-namespace="home">
+      <Nav />
       <div className="container-two">
-        <div className="form-panel">
-          <h1>Signup</h1>
-          <form action="/signup" method="POST">
-            <div className="form-control">
-              <input type="text" name="userName" required />
-              <label>User Name</label>
-            </div>
-            <div className="form-control">
-              <input type="email" name="email" required />
-              <label>Email</label>
-            </div>
-            <div className="form-control">
-              <input type="password" name="password" required />
-              <label>Password</label>
-            </div>
-            <div className="form-control">
-              <input type="password" name="confirmPassword" required />
-              <label>Confirm Password</label>
-            </div>
-            <input className="btn" type="submit" />
-            <p className="text">
-              Have an account? <a href="/login">Login</a>
-            </p>
-          </form>
+        <SignedOut>
+          <SignUp />
+        </SignedOut>
+        <div className="picture-panel-2">
+          <iframe
+            className="graph"
+            width="100%"
+            height="765"
+            src="https://observablehq.com/embed/5e9cc79699e656e5?cells=chart"
+          ></iframe>
+
+          <div className="smile-container" />
+
+          <h1 id="title" className="centered">
+            <span className="fancy">Join and find your world</span>
+          </h1>
+
+          <i id="icon" className="fa-solid fa-chess centered"></i>
         </div>
-        <div classNames="picture-panel" />
       </div>
       <Footer />
     </main>

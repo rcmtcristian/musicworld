@@ -89,7 +89,75 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.8em;
+  background-color: #403832;
+}
+
+.artist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em;
+  background-color: #403832;
+}
+
+.no-match p,
+h1 {
+  color: #fff;
+}
+
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  font-size: 5rem;
+  text-align: center;
+  transform: translate(0%, -50%);
+}
+
+#title {
+  z-index: 3;
+  width: 50vw;
+  margin-top: -0.6em;
+  font-size: 6vw;
+  text-align: center;
+  pointer-events: none;
+  filter: blur(1px);
+  transition: opacity 1s ease;
+}
+#title .fancy {
+  font-size: 0.5em;
+  line-height: 0.9em;
+  color: #fff;
+  filter: blur(1px);
+}
+
+.smile-container {
+  position: absolute;
+  top: 56.34em;
+  right: 0;
+  width: 40%;
+  height: 20%;
+  background-image: url('/client/src/assets/images/smile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 110%;
+  padding: 0 1rem;
+  margin-top: 5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #403832;
+  text-align: center;
 }
 
 header * {
@@ -188,7 +256,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -257,7 +325,17 @@ input {
 .picture-panel {
   width: 50vw;
   overflow-x: auto;
-  background: url('../images/1675985503892.png');
+  background: url('/client/src/assets/images/squares.png');
+  filter: blur(1px);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picture-panel-2 {
+  width: 50vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: url('/client/src/assets/images/signup-panel.png');
   filter: blur(1px);
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,6 +361,74 @@ input {
 
 .text {
   margin-top: 30px;
+}
+
+.cl-card {
+  display: flex;
+  width: 55em;
+  min-width: 5em;
+  height: 100%;
+  padding-top: 9em;
+  box-shadow: none;
+}
+.cl-card .cl-header {
+  font: 0.9rem;
+  text-align: center;
+}
+.cl-card .cl-headerTitle {
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 2.5rem;
+}
+.cl-card .cl-headerSubtitle {
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 1.5rem;
+}
+.cl-card .cl-formButtonPrimary {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3d3535;
+  cursor: pointer;
+  background-color: #f7e9d6;
+  border: none;
+  border-radius: 5px;
+}
+.cl-card .cl-footer {
+  font-size: 1.5rem;
+}
+.cl-card .cl-footerActionLink {
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 1rem;
+  color: #db856a;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.cl-card .cl-footerActionLink:hover {
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 1rem;
+  color: #524b4b;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cl-card .cl-footerActionText {
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 1rem;
+  color: #3d3535;
+}
+.cl-card .cl-logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .footer-container {
