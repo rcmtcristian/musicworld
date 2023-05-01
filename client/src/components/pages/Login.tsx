@@ -1,3 +1,5 @@
+import Footer from '../Footer'
+
 function Login() {
   return (
     <main data-barba="container" data-barba-namespace="home">
@@ -21,6 +23,7 @@ function Login() {
         </div>
         <div className="picture-panel" />
       </div>
+      <Footer />
     </main>
   )
 }
