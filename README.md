@@ -43,7 +43,7 @@ you can search through to find similar music to your favorite artist.
 ### 📜 Stack
 
 - 🌟 [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- 🔀 [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) - Declarative routing for React apps at any scale.
+  - 🔀 [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) - Declarative routing for React apps at any scale.
 - 💜 [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript.
 - ⚡ [Vite](https://vitejs.dev/) - Next generation frontend tooling.
 - ⚙️ [Babel](https://babeljs.io/) with [preset-env](https://babeljs.io/docs/en/babel-preset-env) - The compiler for next generation JavaScript.
