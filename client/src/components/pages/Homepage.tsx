@@ -1,4 +1,4 @@
-import { Application } from '@splinetool/runtime'
+// import { Application } from '@splinetool/runtime'
 import Footer from '../Footer'
 import Nav from '../Nav'
 
@@ -9,17 +9,17 @@ import Nav from '../Nav'
 // import vite from '@/Assets/images/vite.svg'
 
 function Homepage() {
-  const canvas = document.getElementById('canvas3d')
+  // const canvas = document.getElementById('canvas3d')
 
-  async function loadScene(canvas) {
-    if (canvas instanceof HTMLCanvasElement) {
-      const app = new Application(canvas)
-      await app.load('client/src/assets/scenes/scene.splinecode')
-    } else {
-      console.error('Canvas element not found or is not an HTMLCanvasElement')
-    }
-  }
-  loadScene(canvas)
+  // async function loadScene(canvas) {
+  //   if (canvas instanceof HTMLCanvasElement) {
+  //     const app = new Application(canvas)
+  //     await app.load('client/src/assets/scenes/scene.splinecode')
+  //   } else {
+  //     console.error('Canvas element not found or is not an HTMLCanvasElement')
+  //   }
+  // }
+  // loadScene(canvas)
 
   return (
     <main className=" min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800">
@@ -41,7 +41,7 @@ function Homepage() {
           </canvas>
         </div>
       </div> */}
-      <canvas id="canvas3d"></canvas>
+      {/* <canvas id="canvas3d"></canvas> */}
       <section className="main-section wrapper">
         <header />
 
