@@ -1,63 +1,7 @@
-$color_1: #403832;
-$color_2: #776f66;
-$color_3: #333;
-$color_4: #3d3535;
-$color_5: #776f8a;
-$color_6: var(-accent-color);
-$color_7: #fff;
-$color_8: #f7e9d6;
-$color_9: #524b4b;
-$color_10: #db856a;
-$textColor: #403832;
-$rotationDuration: 20s;
-$hoverDuration: 0.3s;
-$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
-$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
-$font-family_1: 'DM Serif Display', serif, verdana, sans-serif;
-$font-family_2: giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-  'Lucida Sans Unicode', geneva, verdana, sans-serif;
-$font-family_3: inherit;
-$font-family_4: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-  'Lucida Sans Unicode', geneva, verdana, sans-serif;
-$background-color_1: #f7e9d6;
-$background-color_2: #fffaee;
-$background-color_3: rgb(0 0 0 / 0%);
-$background-color_4: #f44336;
-$background-color_5: #dad0c1;
-$border-bottom-color_1: var(-accent-color);
+@import './artist';
+@import './clerk-components';
+@import './color-and-fonts-presets';
 
-@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
-@font-face {
-  font-family: giselle;
-  font-weight: 400;
-  src: url('../assets/fonts/FHGiselle-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: giselle;
-  font-weight: 600;
-  src: url('../assets/fonts//FHGiselle-Medium.woff2') format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: giselle;
-  font-weight: 800;
-  src: url('../assets/fonts/FHGiselle-Bold.woff2') format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: gilroy;
-  font-weight: 600;
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: gilroy;
-  font-weight: 800;
-  src: url('https://www.display.care/static/fonts/Gilroy-Bold.woff2') format('woff2');
-  font-display: swap;
-}
 @keyframes rotate {
   to {
     transform: rotate(360deg);
@@ -114,15 +58,6 @@ li {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8em;
-  background-color: $color_1;
-}
-
-.artist {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -279,6 +214,7 @@ svg {
 }
 
 .star-ajust {
+  z-index: 2 !important;
   margin-top: -5em;
 }
 
@@ -395,75 +331,6 @@ input {
 
 .text {
   margin-top: 30px;
-}
-
-.cl-card {
-  display: flex;
-  width: 55em;
-  min-width: 5em;
-  height: 100%;
-  padding-top: 9em;
-  box-shadow: none;
-
-  .cl-header {
-    font: 0.9rem;
-    text-align: center;
-  }
-
-  .cl-headerTitle {
-    font-family: $font-family_4;
-    font-size: 2.5rem;
-  }
-
-  .cl-headerSubtitle {
-    font-family: $font-family_4;
-    font-size: 1.5rem;
-  }
-
-  .cl-formButtonPrimary {
-    padding: 0.5rem 1rem;
-    margin: 1rem 0;
-    font-family: $font-family_4;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $color_4;
-    cursor: pointer;
-    background-color: $background-color_1;
-    border: none;
-    border-radius: 5px;
-  }
-
-  .cl-footer {
-    font-size: 1.5rem;
-  }
-  .cl-footerActionLink {
-    font-family: $font-family_4;
-    font-size: 1rem;
-    color: $color_10;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.4s ease-out;
-  }
-  .cl-footerActionLink:hover {
-    font-family: $font-family_4;
-    font-size: 1rem;
-    color: $color_9;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .cl-footerActionText {
-    font-family: $font-family_4;
-    font-size: 1rem;
-    color: $color_4;
-  }
-
-  .cl-logoBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
 }
 
 .footer-container {

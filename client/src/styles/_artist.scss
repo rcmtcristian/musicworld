@@ -1,0 +1,27 @@
+.artist {
+  width: 100%;
+  height: 100vh;
+  background-color: #f7e9d6;
+  background-image: url('/client/src/assets/images/backintro.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40em;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cl-rootBox {
+    margin-top: 22em;
+  }
+}
+
+.sidebar-footer {
+  color: red;
+}
