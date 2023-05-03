@@ -1,0 +1,68 @@
+.cl-card {
+  display: flex;
+  width: 55em;
+  min-width: 5em;
+  height: 100%;
+  padding-top: 9em;
+  box-shadow: none;
+
+  .cl-header {
+    font: 0.9rem;
+    text-align: center;
+  }
+
+  .cl-headerTitle {
+    font-family: $font-family_4;
+    font-size: 2.5rem;
+  }
+
+  .cl-headerSubtitle {
+    font-family: $font-family_4;
+    font-size: 1.5rem;
+  }
+
+  .cl-formButtonPrimary {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-family: $font-family_4;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color_4;
+    cursor: pointer;
+    background-color: $background-color_1;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .cl-footer {
+    font-size: 1.5rem;
+  }
+  .cl-footerActionLink {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_10;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+  }
+  .cl-footerActionLink:hover {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_9;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cl-footerActionText {
+    font-family: $font-family_4;
+    font-size: 1rem;
+    color: $color_4;
+  }
+
+  .cl-logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}

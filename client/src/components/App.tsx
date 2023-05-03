@@ -10,7 +10,6 @@ import NoMatch from './pages/NoMatch'
 
 const clerk_pub_key = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY
 
-
 function ClerkProviderWithRoutes() {
   const navigate = useNavigate()
 
@@ -26,7 +25,6 @@ function ClerkProviderWithRoutes() {
               </SignedOut>
               <SignedIn>
                 <Artist />
-                <UserButton />
               </SignedIn>
             </>
           }
