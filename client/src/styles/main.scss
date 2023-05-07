@@ -1,6 +1,7 @@
 @import './artist';
 @import './clerk-components';
-@import './color-and-fonts-presets';
+@import './variables';
+@import './artist-table';
 
 @keyframes rotate {
   to {
