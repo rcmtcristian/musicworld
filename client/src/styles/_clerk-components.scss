@@ -1,9 +1,12 @@
+@import './variables';
+
 .cl-card {
   display: flex;
   width: 55em;
   min-width: 5em;
   height: 100%;
   padding-top: 9em;
+  margin: 0;
   box-shadow: none;
 
   .cl-header {
@@ -64,5 +67,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+  }
+  .cl-internal-b3fm6y {
+    display: none;
   }
 }
