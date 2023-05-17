@@ -30,8 +30,8 @@ const GroupView = () => {
 
 function Artist() {
   const [open, setOpen] = useState(true)
-  const [selectedDisplayMenu, setSelectedDisplayMenu] = useState(null)
-  const [selectedMusicMenu, setSelectedMusicMenu] = useState(null)
+  const [selectedDisplayMenu, setSelectedDisplayMenu] = useState('')
+  const [selectedMusicMenu, setSelectedMusicMenu] = useState('')
 
   const MenuDisplay = [
     { title: 'Group view', src: 'graph-view', gap: true, component: GroupView },
@@ -43,11 +43,12 @@ function Artist() {
     { title: 'Toggle Music ', src: 'Music-icon-search' }
   ]
 
-  const handleClickDisplay = (index) => {
-    setSelectedDisplayMenu(index)
+  const handleClickDisplay = (index: number | null) => {
+    setSelectedDisplayMenu(index !== null ? index.toString() : '')
   }
-  const handleClickMusic = (index) => {
-    setSelectedMusicMenu(index)
+
+  const handleClickMusic = (index: number | null) => {
+    setSelectedMusicMenu(index !== null ? index.toString() : '')
   }
 
   return (
@@ -60,7 +61,7 @@ function Artist() {
           <img
             id="logo-side"
             className={`absolute cursor-pointer right-6 top-20 w-7
-             ${!open && 'rotate-180'}`}
+            ${!open && 'rotate-180'}`}
             src="client\src\assets\images\si_Arrow_left_square.svg"
             onClick={() => setOpen(!open)}
           />
@@ -88,12 +89,12 @@ function Artist() {
                   <li
                     key={index}
                     className={`flex cursor-pointer items-center gap-x-4 rounded-md p-2 text-sm text-gray-300
-                      ${Menu.gap ? 'mt-9' : 'mt-2'}
-                      ${selectedDisplayMenu === index ? 'icon-accent invert' : ''}
-                      `}
+      ${Menu.gap ? 'mt-9' : 'mt-2'}
+      ${selectedDisplayMenu === index.toString() ? 'icon-accent invert' : ''}
+    `}
                     onClick={() => handleClickDisplay(index)}
                   >
-                    <img src={`client/src/assets/images/${Menu.src}.svg`} />
+                    <img src={`client/src/assets/images/${Menu.src}.svg`} alt={Menu.title} />
                     <span className={`${!open && 'hidden'} origin-left duration-200 `}>
                       {Menu.title}
                     </span>
@@ -109,7 +110,7 @@ function Artist() {
                     key={index}
                     className={`flex cursor-pointer items-center gap-x-4 rounded-md p-2 text-sm text-gray-300
                     ${Menu.gap ? 'mt-9' : 'mt-2'}
-                    ${selectedMusicMenu === index ? 'icon-accent invert' : ''}
+                    ${selectedMusicMenu === index.toString() ? 'icon-accent invert' : ''}
                     `}
                     onClick={() => handleClickMusic(index)}
                   >
@@ -126,13 +127,13 @@ function Artist() {
       </div>
 
       <div>
-        {selectedDisplayMenu === 0 &&
+        {Number(selectedDisplayMenu) === 0 &&
           React.cloneElement(<GroupView />, {
             key: 'GroupView'
           })}
       </div>
       <div>
-        {selectedDisplayMenu === 1 &&
+        {Number(selectedDisplayMenu) === 1 &&
           React.cloneElement(<TableView />, {
             key: 'TableView'
           })}

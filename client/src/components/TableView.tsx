@@ -9,10 +9,10 @@ const TableView = () => {
             <caption>Artist/Music List</caption>
             <thead>
               <tr>
-                <th rowSpan="2" scope="col">
+                <th rowSpan={2} scope="col">
                   Name
                 </th>
-                <th colSpan="2" scope="col">
+                <th colSpan={2} scope="col">
                   Artist Found
                   <br />
                   (AF)
