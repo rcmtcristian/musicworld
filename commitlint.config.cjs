@@ -19,6 +19,8 @@ module.exports = {
         'revert',
         'style',
         'test',
+        'wip',
+        'Wip',
         'Build',
         'Chore',
         'Ci',
