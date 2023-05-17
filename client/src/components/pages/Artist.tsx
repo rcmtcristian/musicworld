@@ -1,6 +1,15 @@
 import { UserButton, useUser } from '@clerk/clerk-react'
 import React, { useState } from 'react'
+
 import TableView from '../TableView'
+
+import Square from '@/Assets/images/si_Arrow_left_square.svg'
+
+import Logo from '@/Assets/images/logo-mw.png'
+import MusicIcon from '@/Assets/images/Music-icon-search.svg'
+import ArtistIcon from '@/Assets/images/artist-icon-search.svg'
+import TableIcon from '@/Assets/images/table.svg'
+import GraphIcon from '@/Assets/images/graph-view.svg'
 
 const ObtainInfo = () => {
   const { user } = useUser()
@@ -34,13 +43,13 @@ function Artist() {
   const [selectedMusicMenu, setSelectedMusicMenu] = useState('')
 
   const MenuDisplay = [
-    { title: 'Group view', src: 'graph-view', gap: true, component: GroupView },
-    { title: 'Table view', src: 'table-2', component: TableView }
+    { title: 'Group view', src: GraphIcon, gap: true, component: GroupView },
+    { title: 'Table view', src: TableIcon, component: TableView }
   ]
 
   const MenuMusic = [
-    { title: 'Toggle Artist', src: 'artist-icon-search', gap: true },
-    { title: 'Toggle Music ', src: 'Music-icon-search' }
+    { title: 'Toggle Artist', src: ArtistIcon, gap: true },
+    { title: 'Toggle Music ', src: MusicIcon }
   ]
 
   const handleClickDisplay = (index: number | null) => {
@@ -62,12 +71,12 @@ function Artist() {
             id="logo-side"
             className={`absolute cursor-pointer right-6 top-20 w-7
             ${!open && 'rotate-180'}`}
-            src="client\src\assets\images\si_Arrow_left_square.svg"
+            src={Square}
             onClick={() => setOpen(!open)}
           />
           <div id="search-b" className="flex items-center gap-x-4 ">
             <img
-              src="client\src\assets\images\logo-mw.png"
+              src={Logo}
               className={`cursor-pointer duration-500 ${open && 'rotate-[360deg]'}`}
             />
           </div>
@@ -94,7 +103,7 @@ function Artist() {
     `}
                     onClick={() => handleClickDisplay(index)}
                   >
-                    <img src={`client/src/assets/images/${Menu.src}.svg`} alt={Menu.title} />
+                    <img src={Menu.src} alt={Menu.title} />
                     <span className={`${!open && 'hidden'} origin-left duration-200 `}>
                       {Menu.title}
                     </span>
@@ -114,7 +123,7 @@ function Artist() {
                     `}
                     onClick={() => handleClickMusic(index)}
                   >
-                    <img src={`client/src/assets/images/${Menu.src}.svg`} />
+                    <img src={Menu.src} />
                     <span className={`${!open && 'hidden'} origin-left duration-200 `}>
                       {Menu.title}
                     </span>
