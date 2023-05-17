@@ -2,11 +2,8 @@
 import Footer from '../Footer'
 import Nav from '../Nav'
 
-// import react from '@/Assets/images/react.svg'
-// import tailwindcss from '@/Assets/images/tailwindcss.svg'
-// import typescript from '@/Assets/images/typescript.svg'
-// import vercel from '@/Assets/images/vercel.svg'
-// import vite from '@/Assets/images/vite.svg'
+import The from '@/Assets/images/The.svg'
+import Star from '@/Assets/images/star-thicc.svg'
 
 function Homepage() {
   // const canvas = document.getElementById('canvas3d')
@@ -52,14 +49,10 @@ function Homepage() {
                 <span id="title-shaping" className="left">
                   Mapping
                 </span>
-                <img src="client\src\assets\images\The.svg" className="svg-title" alt="the" />
+                <img src={The} className="svg-title" alt="the" />
                 <br />
                 <span className="">
-                  <img
-                    src="client\src\assets\images\star-thicc.svg"
-                    className="svg-title star-ajust"
-                    alt="star"
-                  />
+                  <img src={Star} className="svg-title star-ajust" alt="star" />
                   <span id="title-care">
                     <span className="left">Music World</span>
                   </span>
