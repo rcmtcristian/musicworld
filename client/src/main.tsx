@@ -1,4 +1,4 @@
-import './styles/global.css'
+import './global.css'
 import './styles/main.css'
 import 'virtual:fonts.css'
 
