@@ -46,17 +46,6 @@ function ClerkProviderWithRoutes() {
             </SignedOut>
           }
         />
-        {/* <Route
-          path="/artist"
-          element={
-            <>
-              <SignedIn>
-                <Artist />
-                <UserButton />
-              </SignedIn>
-            </>
-          }
-        /> */}
         <Route>
           <Route path="*" element={<NoMatch />} />
         </Route>
