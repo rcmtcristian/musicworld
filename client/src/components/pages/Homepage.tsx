@@ -2,8 +2,8 @@
 import Footer from '../Footer'
 import Nav from '../Nav'
 
-import The from '@/Assets/images/The.svg'
-import Star from '@/Assets/images/star-thicc.svg'
+import The from '@/Images/The.svg'
+import Star from '@/Images/star-thicc.svg'
 
 function Homepage() {
   // const canvas = document.getElementById('canvas3d')

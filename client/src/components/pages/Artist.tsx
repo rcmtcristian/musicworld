@@ -1,27 +1,33 @@
-import { UserButton, useUser } from '@clerk/clerk-react'
+import { UserButton } from '@clerk/clerk-react'
 import React, { useState } from 'react'
 
 import TableView from '../TableView'
 
-import Square from '@/Assets/images/si_Arrow_left_square.svg'
+import MusicIcon from '@/Images/Music-icon-search.svg'
+import ArtistIcon from '@/Images/artist-icon-search.svg'
+import GraphIcon from '@/Images/graph-view.svg'
+import Logo from '@/Images/logo-mw.png'
+import Square from '@/Images/si_Arrow_left_square.svg'
+import TableIcon from '@/Images/table.svg'
+/**
+ * The ObtainInfo function displays the user's profile image if the user is logged in.
+ * @returns The `ObtainInfo` component is returning an image element with the `src` attribute set to
+ * the `profileImageUrl` property of the `user` object obtained from the `useUser` hook. The `alt`
+ * attribute is set to "profile image" and the image has a class of "h-14 w-14 rounded-full". If there
+ * is no `user` object, the
+ */
 
-import Logo from '@/Assets/images/logo-mw.png'
-import MusicIcon from '@/Assets/images/Music-icon-search.svg'
-import ArtistIcon from '@/Assets/images/artist-icon-search.svg'
-import TableIcon from '@/Assets/images/table.svg'
-import GraphIcon from '@/Assets/images/graph-view.svg'
+// const ObtainInfo = () => {
+//   const { user } = useUser()
 
-const ObtainInfo = () => {
-  const { user } = useUser()
+//   if (!user) return null
 
-  if (!user) return null
-
-  return (
-    <div>
-      <img src={user.profileImageUrl} alt="profile image" className="h-14 w-14 rounded-full" />
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <img src={user.profileImageUrl} alt="profile image" className="h-14 w-14 rounded-full" />
+//     </div>
+//   )
+// }
 
 const GroupView = () => {
   return (
@@ -29,7 +35,7 @@ const GroupView = () => {
       <div className="flex items-center justify-end">
         <h1 className="text-2xl font-bold">Artist</h1>
         <div className="flex items-center gap-x-4">
-          <ObtainInfo />
+          {/* <ObtainInfo /> */}
           <UserButton />
         </div>
       </div>

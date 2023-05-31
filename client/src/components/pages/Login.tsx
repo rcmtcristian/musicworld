@@ -1,6 +1,8 @@
+import { SignedOut, SignIn } from '@clerk/clerk-react'
+
 import Footer from '../Footer'
-import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react'
 import Nav from '../Nav'
+
 function Login() {
   return (
     <main data-barba="container" data-barba-namespace="home">

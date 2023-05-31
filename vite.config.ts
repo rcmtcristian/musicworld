@@ -1,10 +1,9 @@
-/** @type {import('vite').UserConfig} */
-
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePluginFonts } from 'vite-plugin-fonts'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import viteImagemin from 'vite-plugin-imagemin'
+import 'tailwindcss-animate' // Changed to static import
 
 import config from './config.js'
 import postcss from './postcss.config.js'
@@ -50,7 +49,10 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@/', replacement: '/client/src' },
-      { find: '@/Assets', replacement: '/client/src/assets' },
+      { find: '@/Public', replacement: '/public' },
+      { find: '@/Images', replacement: '/client/src/assets/images' },
+      { find: '@/Fonts', replacement: '/public/fonts' },
+      { find: '@/scenes', replacement: '/public/scenes' },
       { find: '@/Components', replacement: '/client/src/components' }
     ]
   }

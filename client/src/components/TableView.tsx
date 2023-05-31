@@ -4,7 +4,7 @@ const TableView = () => {
       <div className="flex items-center justify-end">
         <h1 className="text-2xl font-bold">Artist</h1>
         <div className="flex items-center gap-x-4">
-        <div className="line"></div>
+          <div className="line"></div>
           <table className="Content-table">
             <caption>Artist/Music List</caption>
             <thead>
@@ -102,7 +102,7 @@ const TableView = () => {
                 {/* <td data-th="F-Scale">261&mdash;318</td>
                 <td data-th="EF-Scale">&gt;&thinsp;200</td> */}
                 <td data-th="Typical Damage">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
                   molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
                   numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
                   optio, eaque rerum!
