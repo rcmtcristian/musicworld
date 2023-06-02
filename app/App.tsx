@@ -1,12 +1,16 @@
+import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-react'
 import React from 'react'
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
-import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp, UserButton } from '@clerk/clerk-react'
 
+import Artist from '../client/src/components/pages/Artist'
 import Homepage from '../client/src/components/pages/Homepage'
 import Login from '../client/src/components/pages/Login'
-import Signup from '../client/src/components/pages/Signup'
-import Artist from '../client/src/components/pages/Artist'
 import NoMatch from '../client/src/components/pages/NoMatch'
+import Signup from '../client/src/components/pages/Signup'
+// import { Payment, columns } from '../app/payments/columns'
+// import { DataTable } from '../app/payments/data-table'
+
+// import Page from './payments/Tables'
 
 const clerk_pub_key = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY
 
@@ -29,6 +33,16 @@ function ClerkProviderWithRoutes() {
             </>
           }
         />
+        {/* <Route
+          path="/page"
+          element={
+            <>
+              <SignedIn>
+                <Page />
+              </SignedIn>
+            </>
+          }
+        /> */}
         <Route
           path="/login"
           element={

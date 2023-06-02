@@ -1,6 +1,10 @@
 import { UserButton } from '@clerk/clerk-react'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
+// import Page from '../../../../app/payments/page'
+
+import { Payment, columns } from '../../../../app/payments/columns'
+// import { DataTable } from '../../../../app/payments/data-table'
 import TableView from '../TableView'
 
 import MusicIcon from '@/Images/Music-icon-search.svg'
@@ -43,6 +47,265 @@ const GroupView = () => {
   )
 }
 
+async function getData(): Promise<Payment[]> {
+  // Fetch data from your API here.
+  return [
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sam Gellaitry'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Pallas Athene'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sleep Token'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sam Gellaitry'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Pallas Athene'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sleep Token'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sam Gellaitry'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Pallas Athene'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Sleep Token'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    {
+      id: '728ed52f',
+      amount: 100,
+      status: 'pending',
+      email: 'Schrome sparkss'
+    },
+    // ...
+  ]
+}
+
 function Artist() {
   const [open, setOpen] = useState(true)
   const [selectedDisplayMenu, setSelectedDisplayMenu] = useState('')
@@ -66,24 +329,48 @@ function Artist() {
     setSelectedMusicMenu(index !== null ? index.toString() : '')
   }
 
+  // const data = getData()
+  const [data, setData] = useState<Payment[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getData()
+
+        setData(result)
+        setLoading(false)
+      } catch (error) {
+        // Handle any errors that occur during data fetching
+        console.error('Error fetching data:', error)
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  if (loading) {
+    return <div>Loading...</div> // Display a loading state while fetching data
+  }
+
   return (
     <main className="artist">
-      <div className="flex sidebar ">
+      <div className="sidebar flex ">
         <div
           className={` ${open ? 'w-60' : 'w-20 '} relative h-screen  p-5 pt-8 duration-300`}
           id="sidebar"
         >
           <img
-            id="logo-side"
-            className={`absolute cursor-pointer right-6 top-20 w-7
+            className={`absolute right-6 top-20 w-7 cursor-pointer
             ${!open && 'rotate-180'}`}
+            id="logo-side"
             src={Square}
             onClick={() => setOpen(!open)}
           />
-          <div id="search-b" className="flex items-center gap-x-4 ">
+          <div className="flex items-center gap-x-4 " id="search-b">
             <img
-              src={Logo}
               className={`cursor-pointer duration-500 ${open && 'rotate-[360deg]'}`}
+              src={Logo}
             />
           </div>
           <ul className=" pt-10">
@@ -95,7 +382,7 @@ function Artist() {
               >
                 <span>Search Artist/Album</span>
                 <input type="text" />
-                <span className="text-center">Hoodboi </span>
+                {/* <span className="text-center">Hoodboi </span> */}
               </h1>
             </li>
             <div>
@@ -109,7 +396,7 @@ function Artist() {
     `}
                     onClick={() => handleClickDisplay(index)}
                   >
-                    <img src={Menu.src} alt={Menu.title} />
+                    <img alt={Menu.title} src={Menu.src} />
                     <span className={`${!open && 'hidden'} origin-left duration-200 `}>
                       {Menu.title}
                     </span>
@@ -149,13 +436,15 @@ function Artist() {
       </div>
       <div>
         {Number(selectedDisplayMenu) === 1 &&
-          React.cloneElement(<TableView />, {
+          React.cloneElement(<TableView columns={columns} data={data} />, {
             key: 'TableView'
           })}
       </div>
-      <footer className="sidebar-footer -mt-12 flex flex-row items-end justify-end bg-white py-3 px-5 ">
-        <p>This is the footer</p>
-        <p>wow</p>
+      <footer className="sidebar-footer fixed inset-x-0 bottom-0 flex flex-row items-end justify-end bg-white py-3 px-5">
+        <div className="footer-content">
+          <p>This is the footer</p>
+          <p>wow</p>
+        </div>
       </footer>
 
       <div className="sidebar-footer -mt-10 px-5 ">
