@@ -33,16 +33,6 @@ function ClerkProviderWithRoutes() {
             </>
           }
         />
-        {/* <Route
-          path="/page"
-          element={
-            <>
-              <SignedIn>
-                <Page />
-              </SignedIn>
-            </>
-          }
-        /> */}
         <Route
           path="/login"
           element={

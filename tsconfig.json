@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["./client/src", "app/App.tsx", "client/src/main.tsx"],
+  "include": ["./client/src", "app/App.tsx", "client/src/main.tsx", "app/payments/TableView.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

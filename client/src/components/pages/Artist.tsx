@@ -1,11 +1,9 @@
 import { UserButton } from '@clerk/clerk-react'
 import React, { useState, useEffect } from 'react'
 
-// import Page from '../../../../app/payments/page'
-
 import { Payment, columns } from '../../../../app/payments/columns'
 // import { DataTable } from '../../../../app/payments/data-table'
-import TableView from '../TableView'
+import TableView from '../../../../app/payments/TableView'
 
 import MusicIcon from '@/Images/Music-icon-search.svg'
 import ArtistIcon from '@/Images/artist-icon-search.svg'
