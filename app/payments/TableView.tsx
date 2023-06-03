@@ -22,6 +22,7 @@ import {
 } from '../../client/src/components/ui/table'
 import { Skeleton } from '../../client/src/components/ui/skeleton'
 import { Input } from '../../client/src/components/ui/input'
+import { Badge } from '../../client/src/components/ui/badge'
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -51,6 +52,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
       <div className="flex items-center justify-start">
         <img alt="" src="../../src/assets/images/logo-mw.png" />
         <h1 className="artist-header">Artist List</h1>
+
         <div>
           <Skeleton />
         </div>
@@ -92,7 +94,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
             ))
           ) : (
             <TableRow>
-              <TableCell className="h-24 text-center" colSpan={columns.length}>
+              <TableCell className="h-24 text-center z-20" colSpan={columns.length}>
                 No results.
               </TableCell>
             </TableRow>
@@ -111,6 +113,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
           <div>
             <Skeleton className="h-[20px] w-[100px] rounded-full " />
             <Skeleton className="h-[20px] w-[100px] rounded-full" />
+            <Badge variant="secondary">Secondary</Badge>
           </div>
         </div>
       </div>

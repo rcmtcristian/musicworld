@@ -441,7 +441,6 @@ function Artist() {
       <footer className="sidebar-footer fixed inset-x-0 bottom-0 flex flex-row items-end justify-end bg-white py-3 px-5">
         <div className="footer-content">
           <p>This is the footer</p>
-          <p>wow</p>
         </div>
       </footer>
 
