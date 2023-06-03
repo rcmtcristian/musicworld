@@ -53,6 +53,7 @@ export default defineConfig({
       { find: '@/Images', replacement: '/client/src/assets/images' },
       { find: '@/Fonts', replacement: '/public/fonts' },
       { find: '@/scenes', replacement: '/public/scenes' },
+      { find: '@/lib', replacement: '../../../../lib' },
       { find: '@/Components', replacement: '/client/src/components' }
     ]
   }
