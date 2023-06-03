@@ -53,22 +53,24 @@ you can search through to find similar music to your favorite artist.
 
 ### 📜 Dependencies
 
-- 🎞 [barba.js](https://barba.js.org/) - A library for smooth transitions between pages in web applications.
-- 🎞 [gsap](https://greensock.com/gsap/) - A popular animation library for the web.
-- 🦥 [gitmoji](https://gitmoji.dev/) - A library for adding emojis to Git commit messages.
-- 💅 [Prettier](https://prettier.io/) - Opinionated Code Formatter.
-- 🔍 [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-  - 📦 [Simple Import Sort](https://github.com/lydell/eslint-plugin-simple-import-sort/) - Easy autofixable import sorting.
-  - 📦 [Import Plugin](https://github.com/benmosher/eslint-plugin-import/) - Rules that help validate proper imports.
-  - 📦 [Tailwind Plugin](https://github.com/francoismassart/eslint-plugin-tailwindcss/) - Plugin for Tailwind CSS usage. And a few other ES2015+ related rules.
-- 🐶 [Husky](https://github.com/typicode/husky) - Git hooks made easy.
-  - 🪝 [commit-msg](https://git-scm.com/docs/githooks#_commit_msg) - A git hook for validating commit messages.
-  - 🪝 [pre-commit](https://git-scm.com/docs/githooks#_pre_commit) - A git hook that runs before making a commit.
-- 🚫 [Lint Staged](https://github.com/okonet/lint-staged) - Run linters on git staged files.
-- ✍️ [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with 🎉 [Gitmoji](https://gitmoji.dev/) - A specification for adding human and machine readable meaning to commit messages.
-- 🚦 [GitHub Actions](https://github.com/features/actions) - Automate your workflow on GitHub.
-- spline/runtime
-- rubix
+-  🎞 [Barba.js](https://barba.js.org/) - A library for smooth transitions between pages in web applications.
+-  🎞 [Gsap](https://greensock.com/gsap/) - A popular animation library for the web.
+-  🦥 [Gitmoji](https://gitmoji.dev/) - A library for adding emojis to Git commit messages.
+-   💅 [Prettier](https://prettier.io/) - Opinionated Code Formatter.
+-   🔍 [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+    -   📦 [Simple Import Sort](https://github.com/lydell/eslint-plugin-simple-import-sort/) - Easy autofixable import sorting.
+    -   📦 [Import Plugin](https://github.com/benmosher/eslint-plugin-import/) - Rules that help validate proper imports.
+    -   📦 [Tailwind Plugin](https://github.com/francoismassart/eslint-plugin-tailwindcss/) - Plugin for Tailwind CSS usage. And a few other ES2015+ related rules.
+-   🐶 [Husky](https://github.com/typicode/husky) - Git hooks made easy.
+    -   🪝 [Commit-msg](https://git-scm.com/docs/githooks#_commit_msg) - A git hook for validating commit messages.
+    -   🪝 [Pre-commit](https://git-scm.com/docs/githooks#_pre_commit) - A git hook that runs before making a commit.
+-   🚫 [Lint Staged](https://github.com/okonet/lint-staged) - Run linters on git staged files.
+-   ✍️ [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with 🎉 [Gitmoji](https://gitmoji.dev/) - A specification for adding human and machine readable meaning to commit messages.
+-   🚦 [GitHub Actions](https://github.com/features/actions) - Automate your workflow on GitHub.
+- 👽️ [Spline runtime](https://www.npmjs.com/package/@splinetool/runtime "Spline runtime") - runtime allows you to run Spline scenes in Javascript.
+- 💄 [Radix](https://www.radix-ui.com/ "radix") , [ui.shadcn.com](https://ui.shadcn.com/), [Lucide React](https://lucide.dev/docs/lucide-react) -  component library.
+- 💄 [Clerk](https://clerk.com/ "clerk") -  User management
+
 
 ### 📜 API's
 
