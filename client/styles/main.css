@@ -968,8 +968,9 @@ canvas {
   }
 }
 .main-table {
-  width: 100%;
-  margin-top: -80vh;
+  width: 90%;
+  margin-top: -90vh;
+  margin-left: 8.5vw;
   border-spacing: 0;
   border-collapse: collapse;
   background: #fffaee;

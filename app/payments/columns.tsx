@@ -62,30 +62,14 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem onClick={() => navigator.clipboard.writeText(payment.id)}>
-              Copy payment ID
+              Copy Artist List
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuItem>View Artist</DropdownMenuItem>
+            <DropdownMenuItem>View Artist details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       )
     }
   }
 ]
-
-// export const columns: ColumnDef<Payment>[] = [
-//   {
-//     accessorKey: 'amount',
-//     header: () => <div className="text-right">Amount</div>,
-//     cell: ({ row }) => {
-//       const amount = parseFloat(row.getValue('amount'))
-//       const formatted = new Intl.NumberFormat('en-US', {
-//         style: 'currency',
-//         currency: 'USD'
-//       }).format(amount)
-
-//       return <div className="text-right font-medium col">{formatted}</div>
-//     }
-//   }
-// ]
