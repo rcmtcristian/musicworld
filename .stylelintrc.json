@@ -15,12 +15,9 @@
     "rule-empty-line-before": null,
     "color-function-notation": null,
     "alpha-value-notation": null,
-    "property-no-vendor-prefix": [
-      true,
-      {
-        "ignoreProperties": ["vendor-prefix"]
-      }
-    ],
+    "no-duplicate-at-import-rules": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
     "selector-class-pattern": null
   },
   "customSyntax": "postcss-scss"

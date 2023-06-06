@@ -1,8 +1,5 @@
-/* stylelint-disable no-duplicate-at-import-rules */
-/* stylelint-disable no-descending-specificity */
 @import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
-
 @font-face {
   font-family: giselle;
   font-weight: 400;
@@ -132,7 +129,7 @@
   display: flex;
   width: 55em;
   min-width: 5em;
-  height: 60%;
+  height: 100%;
   padding-top: 9em;
   margin: 0;
   box-shadow: none;
@@ -206,7 +203,7 @@
   height: 60%;
 }
 .cl-userButtonPopoverCard {
-  height: 60% !important;
+  height: 60%;
 }
 .cl-userButtonPopoverMain {
   display: grid;
@@ -633,6 +630,7 @@ ul {
   width: 85%;
   height: 100%;
   margin-top: -9em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 svg {
