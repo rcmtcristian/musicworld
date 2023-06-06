@@ -1,4 +1,4 @@
-import { UserButton } from '@clerk/clerk-react'
+import { UserButton, UserProfile } from '@clerk/clerk-react'
 import React, { useState, useEffect } from 'react'
 
 import { Payment, columns } from '../../../../app/payments/columns'
@@ -299,7 +299,7 @@ async function getData(): Promise<Payment[]> {
       amount: 100,
       status: 'pending',
       email: 'Schrome sparkss'
-    },
+    }
     // ...
   ]
 }
@@ -421,6 +421,12 @@ function Artist() {
                   </li>
                 ))}
               </ul>
+              <ul>
+                <li className="mt-9 flex cursor-pointer items-center gap-x-4 rounded-md p-2 text-sm text-gray-300">
+                  <img src={Square} />
+                  <span className={`${!open && 'hidden'} origin-left duration-200 `}>log</span>
+                </li>
+              </ul>
             </div>
           </ul>
         </div>
@@ -438,15 +444,13 @@ function Artist() {
             key: 'TableView'
           })}
       </div>
+
       <footer className="sidebar-footer fixed inset-x-0 bottom-0 flex flex-row items-end justify-end bg-white py-3 px-5">
-        <div className="footer-content">
+        <div className="mr-3">
           <p>This is the footer</p>
         </div>
-      </footer>
-
-      <div className="sidebar-footer -mt-10 px-5 ">
         <UserButton />
-      </div>
+      </footer>
     </main>
   )
 }

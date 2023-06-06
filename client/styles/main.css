@@ -1,3 +1,4 @@
+/* stylelint-disable no-duplicate-at-import-rules */
 /* stylelint-disable no-descending-specificity */
 @import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
@@ -58,9 +59,6 @@
 .artist li {
   display: flex;
   flex-direction: row;
-}
-.artist .cl-rootBox {
-  margin-top: 22em;
 }
 .artist #sidebar {
   z-index: 10;
@@ -134,7 +132,7 @@
   display: flex;
   width: 55em;
   min-width: 5em;
-  height: 100%;
+  height: 60%;
   padding-top: 9em;
   margin: 0;
   box-shadow: none;
@@ -200,6 +198,18 @@
 }
 .cl-card .cl-internal-b3fm6y {
   display: none;
+}
+.artist .cl-rootBox {
+  margin-top: 1px;
+}
+.cl-userButton-popover {
+  height: 60%;
+}
+.cl-userButtonPopoverCard {
+  height: 60% !important;
+}
+.cl-userButtonPopoverMain {
+  display: grid;
 }
 @font-face {
   font-family: giselle;
@@ -623,7 +633,6 @@ ul {
   width: 85%;
   height: 100%;
   margin-top: -9em;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 svg {

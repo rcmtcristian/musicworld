@@ -2,7 +2,8 @@
 @import './clerk-components';
 @import './variables';
 @import './artist-table';
-
+/* stylelint-disable no-duplicate-at-import-rules */
+/* stylelint-disable no-descending-specificity */
 @keyframes rotate {
   to {
     transform: rotate(360deg);
