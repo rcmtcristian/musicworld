@@ -1,4 +1,7 @@
 // import { Application } from '@splinetool/runtime'
+
+import { Link } from 'react-router-dom'
+
 import Footer from '../Footer'
 import Nav from '../Nav'
 
@@ -82,11 +85,8 @@ function Homepage() {
                     </span>
                   </p>
 
-                  {/*
-            <!- button to login ->
-            */}
                   <div className="sub-second-section-container-left-button">
-                    <a href="/signup" className="link link-alt">
+                    <Link to="/signup" className="link link-alt">
                       <svg
                         viewBox="0 0 200 200"
                         width="200"
@@ -128,17 +128,12 @@ function Homepage() {
                           </textPath>
                         </text>
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </section>
           </section>
-          <footer>
-            {/*
-      <!- //copyright ->
-      */}
-          </footer>
         </main>
       </section>
       <Footer />
