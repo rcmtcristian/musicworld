@@ -1,9 +1,14 @@
+/* eslint-disable promise/always-return */
 import { UserButton, UserProfile } from '@clerk/clerk-react'
 import React, { useState, useEffect } from 'react'
 
+// import { SpotifyData } from '../../../../server/controllers/spotify.js'
 import { Payment, columns } from '../../../../app/payments/columns'
 // import { DataTable } from '../../../../app/payments/data-table'
 import TableView from '../../../../app/payments/TableView'
+import { Input } from '../ui/input.js'
+import { Button } from '../ui/button.js'
+import { Badge } from '../ui/badge'
 
 import MusicIcon from '@/Images/Music-icon-search.svg'
 import ArtistIcon from '@/Images/artist-icon-search.svg'
@@ -18,18 +23,6 @@ import TableIcon from '@/Images/table.svg'
  * attribute is set to "profile image" and the image has a class of "h-14 w-14 rounded-full". If there
  * is no `user` object, the
  */
-
-// const ObtainInfo = () => {
-//   const { user } = useUser()
-
-//   if (!user) return null
-
-//   return (
-//     <div>
-//       <img src={user.profileImageUrl} alt="profile image" className="h-14 w-14 rounded-full" />
-//     </div>
-//   )
-// }
 
 const GroupView = () => {
   return (
@@ -53,261 +46,21 @@ async function getData(): Promise<Payment[]> {
       amount: 100,
       status: 'pending',
       email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
     }
-    // ...
   ]
 }
+
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
+const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET
 
 function Artist() {
   const [open, setOpen] = useState(true)
   const [selectedDisplayMenu, setSelectedDisplayMenu] = useState('')
   const [selectedMusicMenu, setSelectedMusicMenu] = useState('')
+  const [search, setSearch] = useState('')
+  const [relatedArtists, setRelatedArtists] = useState<{ name: string, images: { url: string }[] }[]>([]);
+  const [genres, setGenres] = useState([])
+  const [accesstoken, setAccessToken] = useState('')
 
   const MenuDisplay = [
     { title: 'Group view', src: GraphIcon, gap: true, component: GroupView },
@@ -347,8 +100,110 @@ function Artist() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    const getToken = async () => {
+      const authParameters = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `grant_type=client_credentials&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+      }
+
+      try {
+        const response = await fetch('https://accounts.spotify.com/api/token', authParameters)
+        const data = await response.json()
+
+        setAccessToken(data.access_token)
+        // console.log(response)
+      } catch (error) {
+        // Handle any error that occurs during the fetch request
+        // console.error('Error:', error)
+      }
+    }
+
+    getToken()
+  }, [])
+
   if (loading) {
     return <div>Loading...</div> // Display a loading state while fetching data
+  }
+
+  async function getArtist() {
+    console.log(`search for ${search}`)
+
+    // Get request using search to get artist id
+    const artistParams = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accesstoken}`
+      }
+    }
+
+    console.log(`search for ${search}`)
+
+    // Get request using search to get artist id
+
+    const artistId = await fetch(
+      `https://api.spotify.com/v1/search?q=${search}&type=artist`,
+      artistParams
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        return data.artists.items[0].id
+      })
+
+    console.log(artistId)
+
+    // Get request using artist id to get related artists
+    const relatedArtists = await fetch(
+      `https://api.spotify.com/v1/artists/${artistId}/related-artists`,
+      artistParams
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRelatedArtists(data.artists)
+      })
+
+    console.log(relatedArtists)
+
+    // Get request using artist id to get all the genres of the artist
+    const genres = await fetch(`https://api.spotify.com/v1/artists/${artistId}`, artistParams)
+      .then((response) => response.json())
+      .then((data) => {
+        // return data.genres
+        setGenres(data.genres)
+      })
+
+    console.log(genres)
+
+    // Get request to ge the similar genres
+    const handleKeyDown = (event: { key: string }) => {
+      // Check for the specific key you want to handle
+      if (event.key === 'Enter') {
+        // Perform your desired action
+        getArtist()
+      }
+    }
+
+    // Display those results to the user
+  }
+
+  // Get request to ge the similar genres
+
+  // Display those results to the user
+
+  const handleKeyDown = (event: { key: string }) => {
+    // Check for the specific key you want to handle
+    if (event.key === 'Enter') {
+      // Perform your desired action
+      getArtist()
+    }
+  }
+  const handleSecondarySearch = (artistName: string) => {
+    setSearch(artistName)
+    getArtist()
   }
 
   return (
@@ -379,8 +234,35 @@ function Artist() {
                 }`}
               >
                 <span>Search Artist/Album</span>
-                <input type="text" />
-                {/* <span className="text-center">Hoodboi </span> */}
+                <Input
+                  type="input"
+                  onChange={(e) => setSearch(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />
+                <Button onClick={getArtist}>Search</Button>
+                <main className=" w-6/12">
+                  {relatedArtists.map((artist, i) => {
+                    return (
+                      <div key={i} style={{ width: '10rem' }}>
+                        <div>
+                          <Badge onClick={() => handleSecondarySearch(artist.name)}>
+                            {' '}
+                            {artist.name}
+                          </Badge>
+                          <div>
+                            {/* {genres.map((genre, i) => {
+                              return (
+                                <Badge key={i} style={{ background: 'white' }} variant="outline">
+                                  {genre}
+                                </Badge>
+                              )
+                            })} */}
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </main>
               </h1>
             </li>
             <div>
