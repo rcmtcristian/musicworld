@@ -8,6 +8,7 @@ import {
   ColumnFiltersState,
   SortingState,
   flexRender,
+  VisibilityState,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
@@ -25,8 +26,16 @@ import {
 } from '../../client/src/components/ui/table'
 import { Skeleton } from '../../client/src/components/ui/skeleton'
 import { Input } from '../../client/src/components/ui/input'
-import { Badge } from '../../client/src/components/ui/badge'
 import { Button } from '../../client/src/components/ui/button'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Badge } from '../../client/src/components/ui/badge'
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger
+} from '../../client/src/components/ui/dropdown-menu'
+import { DataTablePagination } from '../../client/src/components/ui/data-table-pagination'
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -36,6 +45,9 @@ interface DataTableProps<TData, TValue> {
 export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({})
+  const [rowSelection, setRowSelection] = React.useState({})
+
   const table = useReactTable({
     data,
     columns,
@@ -45,25 +57,55 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
+    onColumnVisibilityChange: setColumnVisibility,
+    onRowSelectionChange: setRowSelection,
     state: {
       sorting,
-      columnFilters
+      columnFilters,
+      columnVisibility,
+      rowSelection
     }
   })
 
   return (
     <div className="main-table h-screen rounded-md border ">
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-center">
         <h1 className="artist-header">Artist List</h1>
-        {/* <img alt="" className=" h-10" src="../../client/src/assets/images/Group.svg" /> */}
+        <img alt="" className=" h-10" src="../../client/src/assets/images/Group.svg" />
       </div>
       <div className="flex items-center py-4 px-3">
-        <Input
-          className="max-w-sm "
-          placeholder="Filter Artist..."
-          value={(table.getColumn('email')?.getFilterValue() as string) ?? ''}
-          onChange={(event) => table.getColumn('email')?.setFilterValue(event.target.value)}
-        />
+        <div className="flex justify-between  ">
+          <Input
+            className=" m-3 max-w-sm"
+            placeholder="Filter Artist..."
+            value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
+            onChange={(event) => table.getColumn('name')?.setFilterValue(event.target.value)}
+          />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="ml-auto" variant="outline">
+                Columns
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {table
+                .getAllColumns()
+                .filter((column) => column.getCanHide())
+                .map((column) => {
+                  return (
+                    <DropdownMenuCheckboxItem
+                      key={column.id}
+                      checked={column.getIsVisible()}
+                      className="capitalize"
+                      onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                    >
+                      {column.id}
+                    </DropdownMenuCheckboxItem>
+                  )
+                })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
 
       <section className="p-2">
@@ -103,7 +145,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
             )}
           </TableBody>
         </Table>
-
+        <DataTablePagination table={table} />
         <div>
           <div className=" m-3 flex justify-end space-x-4 ">
             <Button
@@ -127,7 +169,6 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
             <div>
               <Skeleton className="h-[20px] w-[100px] rounded-full" />
               <Skeleton className="h-[20px] w-[100px] rounded-full" />
-              {/* <Badge variant="secondary">Secondary</Badge> */}
             </div>
           </div>
         </div>

@@ -12,38 +12,85 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '../../client/src/components/ui/dropdown-menu'
+import { Badge } from '../../client/src/components/ui/badge'
+import { Checkbox } from '../../client/src/components/ui/checkbox'
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Payment = {
   id: string
-  amount: number
-  status: 'pending' | 'processing' | 'success' | 'failed'
-  email: string
+  artist: string[] | string
+  image: string | 'pending' | 'processing' | 'success' | 'failed'
+  name: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
   {
-    accessorKey: 'status',
+    id: 'select',
+    header: ({ table }) => (
+      <Checkbox
+        checked={table.getIsAllPageRowsSelected()}
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false
+  },
+  {
+    accessorKey: 'image',
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Email
+          Images
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
+      )
+    },
+    cell: ({ row }) => {
+      const artistImage = row.original
+
+      return (
+        <div>
+          <img alt="" className=" h-14 rounded-sm " src={artistImage.image} />
+        </div>
       )
     }
   },
   {
-    accessorKey: 'email',
+    accessorKey: 'name',
     header: 'Name'
   },
   {
-    accessorKey: 'amount',
-    header: 'Fetched Artist'
+    accessorKey: 'artist',
+    header: 'Fetched Artist',
+    cell: ({ row }) => {
+      const relatedArtist = row.original
+
+      if (Array.isArray(relatedArtist.artist)) {
+        return (
+          <div>
+            {relatedArtist.artist.map((artist, index) => (
+              <Badge key={index} variant={'art'}>
+                {artist}
+              </Badge>
+            ))}
+          </div>
+        )
+      }
+
+      return null
+    }
   },
 
   {

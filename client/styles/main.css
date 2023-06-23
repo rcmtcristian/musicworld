@@ -59,10 +59,7 @@
 }
 .artist #sidebar {
   z-index: 10;
-  background: #d9cfc0;
-}
-.sidebar-footer {
-  color: red;
+  background: #dad0c1;
 }
 .artist-table-container {
   position: absolute;
@@ -84,6 +81,11 @@
 }
 .icon-accent {
   background: #bfccd1;
+}
+.header-counter {
+  color: #333;
+  background: #dad0c1;
+  border-bottom: #db856a solid 2px;
 }
 @font-face {
   font-family: giselle;
@@ -975,9 +977,8 @@ canvas {
   }
 }
 .main-table {
-  width: 90%;
-  margin-top: -90vh;
-  margin-left: 8.5vw;
+  margin-top: -95vh;
+  margin-left: 4.8vw;
   border-spacing: 0;
   border-collapse: collapse;
   background: #fffaee;
@@ -985,12 +986,10 @@ canvas {
 }
 .artist-header {
   padding: 1rem;
-  margin-left: 8.5em;
   font-family: 'DM Serif Display', serif, verdana, sans-serif;
   font-size: 3rem;
   font-weight: 600;
   color: #403832 !important;
-  text-align: center;
   text-transform: uppercase;
   background: #fffaee;
 }
