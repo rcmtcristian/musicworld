@@ -1,9 +1,17 @@
-import { UserButton, UserProfile } from '@clerk/clerk-react'
-import React, { useState, useEffect } from 'react'
+/* eslint-disable no-console */
+/* eslint-disable promise/always-return */
 
+import { UserButton } from '@clerk/clerk-react'
+import React, { useEffect, useState } from 'react'
+
+// import { SpotifyData } from '../../../../server/controllers/spotify.js'
 import { Payment, columns } from '../../../../app/payments/columns'
 // import { DataTable } from '../../../../app/payments/data-table'
 import TableView from '../../../../app/payments/TableView'
+import { Badge } from '../ui/badge'
+import { Button } from '../ui/button.js'
+import { Input } from '../ui/input.js'
+import GroupView from '../Displays/GroupView'
 
 import MusicIcon from '@/Images/Music-icon-search.svg'
 import ArtistIcon from '@/Images/artist-icon-search.svg'
@@ -11,6 +19,7 @@ import GraphIcon from '@/Images/graph-view.svg'
 import Logo from '@/Images/logo-mw.png'
 import Square from '@/Images/si_Arrow_left_square.svg'
 import TableIcon from '@/Images/table.svg'
+import HeaderCounter from '../ui/HeaderCounter'
 /**
  * The ObtainInfo function displays the user's profile image if the user is logged in.
  * @returns The `ObtainInfo` component is returning an image element with the `src` attribute set to
@@ -19,295 +28,20 @@ import TableIcon from '@/Images/table.svg'
  * is no `user` object, the
  */
 
-// const ObtainInfo = () => {
-//   const { user } = useUser()
-
-//   if (!user) return null
-
-//   return (
-//     <div>
-//       <img src={user.profileImageUrl} alt="profile image" className="h-14 w-14 rounded-full" />
-//     </div>
-//   )
-// }
-
-const GroupView = () => {
-  return (
-    <main className="artist-table-container">
-      <div className="flex items-center justify-end">
-        <h1 className="text-2xl font-bold">Artist</h1>
-        <div className="flex items-center gap-x-4">
-          {/* <ObtainInfo /> */}
-          <UserButton />
-        </div>
-      </div>
-    </main>
-  )
-}
-
-async function getData(): Promise<Payment[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sam Gellaitry'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Pallas Athene'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Sleep Token'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    },
-    {
-      id: '728ed52f',
-      amount: 100,
-      status: 'pending',
-      email: 'Schrome sparkss'
-    }
-    // ...
-  ]
-}
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
+const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET
 
 function Artist() {
   const [open, setOpen] = useState(true)
   const [selectedDisplayMenu, setSelectedDisplayMenu] = useState('')
   const [selectedMusicMenu, setSelectedMusicMenu] = useState('')
+  const [search, setSearch] = useState('')
+  const [relatedArtists, setRelatedArtists] = useState<
+    { name: string; images: { url: string }[] }[]
+  >([])
+  const [genres, setGenres] = useState([])
+  const [accesstoken, setAccessToken] = useState('')
+  const [artistImage, setArtistImage] = useState('')
 
   const MenuDisplay = [
     { title: 'Group view', src: GraphIcon, gap: true, component: GroupView },
@@ -347,8 +81,161 @@ function Artist() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    const getToken = async () => {
+      const authParameters = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `grant_type=client_credentials&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+      }
+
+      try {
+        const response = await fetch('https://accounts.spotify.com/api/token', authParameters)
+        const data = await response.json()
+
+        setAccessToken(data.access_token)
+        // console.log(response)
+      } catch (error) {
+        // Handle any error that occurs during the fetch request
+        // console.error('Error:', error)
+      }
+    }
+
+    getToken()
+  }, [])
+
   if (loading) {
     return <div>Loading...</div> // Display a loading state while fetching data
+  }
+
+  async function getArtist() {
+    console.log(`search for ${search}`)
+
+    // Get request using search to get artist id
+    const artistParams = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accesstoken}`
+      }
+    }
+
+    console.log(`search for ${search}`)
+
+    // Get request using search to get artist id
+
+    const artistId = await fetch(
+      `https://api.spotify.com/v1/search?q=${search}&type=artist`,
+      artistParams
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        return data.artists.items[0].id
+      })
+
+    console.log(artistId)
+
+    // Get request using artist id to get related artists
+    const relatedArtists = await fetch(
+      `https://api.spotify.com/v1/artists/${artistId}/related-artists`,
+      artistParams
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRelatedArtists(data.artists)
+      })
+
+    console.log(relatedArtists)
+
+    // Get request using artist id to get all the genres of the artist
+    const genres = await fetch(`https://api.spotify.com/v1/artists/${artistId}`, artistParams)
+      .then((response) => response.json())
+      .then((data) => {
+        // return data.genres
+        setGenres(data.genres)
+      })
+
+    console.log(genres)
+
+    const artistImage = await fetch(
+      `https://api.spotify.com/v1/search?q=${search}&type=artist`,
+      artistParams
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        return data.artists.items[0].images[0].url
+      })
+
+    setArtistImage(artistImage)
+  }
+
+
+  async function getData(): Promise<Payment[]> {
+    // Fetch data from your API here.
+    const relatedArtist = relatedArtists.map((artist) => artist.name)
+    const artistObject = [
+      {
+        id: search,
+        artist: relatedArtist,
+        image: artistImage,
+        name: search
+      }
+    ]
+
+    let existingData: Payment[] = []
+
+    // Retrieve the existing data from Local Storage
+    const existingDataJson = localStorage.getItem('data')
+
+    if (existingDataJson) {
+      existingData = JSON.parse(existingDataJson)
+    }
+
+    const newData = existingData.concat(artistObject) // Concatenate the existing data with the new artist object
+
+    // Store the updated data in Local Storage
+    localStorage.setItem('data', JSON.stringify(newData))
+
+    return newData
+  }
+
+
+  const handleGetData = async () => {
+    try {
+      const result = await getData()
+
+      setData(result)
+      setLoading(false)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+
+  const handleKeyDown = (event: { key: string }) => {
+    // Check for the specific key you want to handle
+    if (event.key === 'Enter') {
+      // Perform your desired action
+      getArtist()
+      handleGetData()
+    }
+  }
+  const handleSearchButton = () => {
+    getArtist()
+    handleGetData()
+    console.log('called 1')
+  }
+  const handleSecondarySearch = (artistName: string) => {
+    setSearch(artistName)
+    getArtist()
+    handleGetData()
+    console.log('called 2')
+  }
+
+  function clearData() {
+    localStorage.removeItem('data')
+    handleGetData()
   }
 
   return (
@@ -379,8 +266,27 @@ function Artist() {
                 }`}
               >
                 <span>Search Artist/Album</span>
-                <input type="text" />
-                {/* <span className="text-center">Hoodboi </span> */}
+                <Input
+                  type="input"
+                  onChange={(e) => setSearch(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />
+                <Button onClick={handleSearchButton}>Search</Button>
+                <Button onClick={() => clearData()}>Clear Data</Button>
+                <main className="mt-3">
+                  <div className="flex flex-wrap">
+                    {relatedArtists.map((artist, i) => (
+                      <div key={i} className=" ">
+                        <Badge
+                          onClick={() => handleSecondarySearch(artist.name)}
+                          className="flex flex-wrap text-xs"
+                        >
+                          {artist.name}
+                        </Badge>
+                      </div>
+                    ))}
+                  </div>
+                </main>
               </h1>
             </li>
             <div>
@@ -439,18 +345,14 @@ function Artist() {
           })}
       </div>
       <div>
-        {Number(selectedDisplayMenu) === 1 &&
+        {/* {Number(selectedDisplayMenu) === 1 &&
           React.cloneElement(<TableView columns={columns} data={data} />, {
             key: 'TableView'
-          })}
+          })} */}
+        <TableView columns={columns} data={data} />
       </div>
 
-      <footer className="sidebar-footer fixed inset-x-0 bottom-0 flex flex-row items-end justify-end bg-white py-3 px-5">
-        <div className="mr-3">
-          <p>This is the footer</p>
-        </div>
-        <UserButton />
-      </footer>
+      <HeaderCounter />
     </main>
   )
 }

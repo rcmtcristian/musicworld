@@ -30,6 +30,10 @@ module.exports = {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))'
         },
+        art: {
+          DEFAULT: 'hsl(14, 61%, 64%)',
+          foreground: 'hsl(14, 53%, 72%)'
+        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))'
