@@ -81,7 +81,7 @@ export const columns: ColumnDef<Payment>[] = [
         return (
           <div>
             {relatedArtist.artist.map((artist, index) => (
-              <Badge key={index} variant={'art'}>
+              <Badge key={index} variant={'art'} onClick={() => navigator.clipboard.writeText(artist)}>
                 {artist}
               </Badge>
             ))}

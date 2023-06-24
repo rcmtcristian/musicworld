@@ -12,14 +12,14 @@ import { Badge } from '../ui/badge'
 import { Button } from '../ui/button.js'
 import { Input } from '../ui/input.js'
 import GroupView from '../Displays/GroupView'
+import HeaderCounter from '../ui/HeaderCounter'
 
 import MusicIcon from '@/Images/Music-icon-search.svg'
 import ArtistIcon from '@/Images/artist-icon-search.svg'
 import GraphIcon from '@/Images/graph-view.svg'
 import Logo from '@/Images/logo-mw.png'
-import Square from '@/Images/si_Arrow_left_square.svg'
+import Square from '@/Images/sidebar-arrow.svg'
 import TableIcon from '@/Images/table.svg'
-import HeaderCounter from '../ui/HeaderCounter'
 /**
  * The ObtainInfo function displays the user's profile image if the user is logged in.
  * @returns The `ObtainInfo` component is returning an image element with the `src` attribute set to
@@ -171,7 +171,6 @@ function Artist() {
     setArtistImage(artistImage)
   }
 
-
   async function getData(): Promise<Payment[]> {
     // Fetch data from your API here.
     const relatedArtist = relatedArtists.map((artist) => artist.name)
@@ -200,7 +199,6 @@ function Artist() {
 
     return newData
   }
-
 
   const handleGetData = async () => {
     try {
@@ -246,49 +244,57 @@ function Artist() {
           id="sidebar"
         >
           <img
-            className={`absolute right-6 top-20 w-7 cursor-pointer
+            className={`absolute -right-3.5 top-20 w-7 cursor-pointer
             ${!open && 'rotate-180'}`}
             id="logo-side"
             src={Square}
             onClick={() => setOpen(!open)}
           />
-          <div className="flex items-center gap-x-4 " id="search-b">
-            <img
-              className={`cursor-pointer duration-500 ${open && 'rotate-[360deg]'}`}
-              src={Logo}
-            />
+          <div
+            // eslint-disable-next-line tailwindcss/no-custom-classname
+            className={` ${
+              open ? 'w-60' : 'w-[40] '
+            } bg-paleArt sidebar-top-section border-brown flex items-center gap-x-4 border-b-2`}
+            id="search-b"
+          >
+            <section
+              className={`origin-left text-xl font-medium text-white duration-200 ${
+                !open && 'scale-0 '
+              }`}
+            >
+              <Input
+                className="b-2 border-brown mb-3 border-b-4 bg-transparent text-white placeholder:text-white placeholder:text-opacity-50 focus:border-b-2  focus:outline-none"
+                placeholder="Search Artist/Genre"
+                type="input"
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
+              <div className="flex justify-between">
+                <Button className="bg-brown" onClick={handleSearchButton}>
+                  Search
+                </Button>
+                <Button className="bg-brown " onClick={() => clearData()}>
+                  Clear
+                </Button>
+              </div>
+
+              <main className="mt-3">
+                <div className="flex flex-wrap">
+                  {relatedArtists.map((artist, i) => (
+                    <div key={i} className=" ">
+                      <Badge
+                        className="flex flex-wrap text-xs"
+                        onClick={() => handleSecondarySearch(artist.name)}
+                      >
+                        {artist.name}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </main>
+            </section>
           </div>
           <ul className=" pt-10">
-            <li>
-              <h1
-                className={`origin-left text-xl font-medium text-white duration-200 ${
-                  !open && 'scale-0'
-                }`}
-              >
-                <span>Search Artist/Album</span>
-                <Input
-                  type="input"
-                  onChange={(e) => setSearch(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                />
-                <Button onClick={handleSearchButton}>Search</Button>
-                <Button onClick={() => clearData()}>Clear Data</Button>
-                <main className="mt-3">
-                  <div className="flex flex-wrap">
-                    {relatedArtists.map((artist, i) => (
-                      <div key={i} className=" ">
-                        <Badge
-                          onClick={() => handleSecondarySearch(artist.name)}
-                          className="flex flex-wrap text-xs"
-                        >
-                          {artist.name}
-                        </Badge>
-                      </div>
-                    ))}
-                  </div>
-                </main>
-              </h1>
-            </li>
             <div>
               <ul>
                 {MenuDisplay.map((Menu, index) => (
@@ -329,8 +335,7 @@ function Artist() {
               </ul>
               <ul>
                 <li className="mt-9 flex cursor-pointer items-center gap-x-4 rounded-md p-2 text-sm text-gray-300">
-                  <img src={Square} />
-                  <span className={`${!open && 'hidden'} origin-left duration-200 `}>log</span>
+                  <UserButton />
                 </li>
               </ul>
             </div>
