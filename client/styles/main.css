@@ -1,5 +1,11 @@
 @import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
 @font-face {
   font-family: giselle;
   font-weight: 400;
@@ -43,8 +49,9 @@
 .artist {
   width: 100%;
   height: 100vh;
-  background-color: #f7e9d6;
-  background-image: url('/client/src/assets/images/backintro.png');
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #fffaee;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40em;
@@ -58,8 +65,22 @@
   flex-direction: row;
 }
 .artist #sidebar {
+  position: fixed;
   z-index: 10;
   background: #dad0c1;
+  border-right: #3d3535 solid 2px;
+}
+.artist .sidebar-top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+  padding: 1em 3.82em 1em 1em;
+  margin-top: -2em;
+  margin-left: -1.22em;
+  border-bottom: #3d3535 solid 2px;
+  transition: all 390ms ease;
 }
 .artist-table-container {
   position: absolute;
@@ -454,6 +475,15 @@
   .Content-table tbody:hover > tr td a {
     color: #38487a;
   }
+}
+.main-table {
+  width: 96%;
+  margin-top: 5vh;
+  margin-left: 4.8vw;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background: #fffaee;
+  border: 1px solid #ddd;
 }
 @keyframes rotate {
   to {
@@ -975,14 +1005,6 @@ canvas {
     order: 2;
     padding: 10px 20px 20px;
   }
-}
-.main-table {
-  margin-top: -95vh;
-  margin-left: 4.8vw;
-  border-spacing: 0;
-  border-collapse: collapse;
-  background: #fffaee;
-  border: 1px solid #ddd;
 }
 .artist-header {
   padding: 1rem;

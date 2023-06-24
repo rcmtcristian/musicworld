@@ -34,6 +34,14 @@ module.exports = {
           DEFAULT: 'hsl(14, 61%, 64%)',
           foreground: 'hsl(14, 53%, 72%)'
         },
+        paleArt: {
+          DEFAULT: 'hsl(24, 45%, 67%)',
+          foreground: 'hsl(24, 85%, 80%)'
+        },
+        brown: {
+          DEFAULT: 'hsl(16, 19%, 23%)',
+          foreground: 'hsl(16, 19%, 36%)'
+        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))'
