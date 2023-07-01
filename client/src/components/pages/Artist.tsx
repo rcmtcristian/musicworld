@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable no-console */
 /* eslint-disable promise/always-return */
 
 import { UserButton } from '@clerk/clerk-react'
 import React, { useEffect, useState } from 'react'
+// import {} from '../../../../server/config/data.js'
 
 // import { SpotifyData } from '../../../../server/controllers/spotify.js'
 import { Payment, columns } from '../../../../app/payments/columns'
@@ -17,7 +19,7 @@ import HeaderCounter from '../ui/HeaderCounter'
 import MusicIcon from '@/Images/Music-icon-search.svg'
 import ArtistIcon from '@/Images/artist-icon-search.svg'
 import GraphIcon from '@/Images/graph-view.svg'
-import Logo from '@/Images/logo-mw.png'
+// import Logo from '@/Images/logo-mw.png'
 import Square from '@/Images/sidebar-arrow.svg'
 import TableIcon from '@/Images/table.svg'
 /**
@@ -37,8 +39,9 @@ function Artist() {
   const [selectedMusicMenu, setSelectedMusicMenu] = useState('')
   const [search, setSearch] = useState('')
   const [relatedArtists, setRelatedArtists] = useState<
-    { name: string; images: { url: string }[] }[]
+    { id: string; name: string; images: { url: string }[]; popularity: number }[]
   >([])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [genres, setGenres] = useState([])
   const [accesstoken, setAccessToken] = useState('')
   const [artistImage, setArtistImage] = useState('')
@@ -79,6 +82,7 @@ function Artist() {
     }
 
     fetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -174,12 +178,17 @@ function Artist() {
   async function getData(): Promise<Payment[]> {
     // Fetch data from your API here.
     const relatedArtist = relatedArtists.map((artist) => artist.name)
+    const relatedArtistPopularity = relatedArtists.map((artist) => artist.popularity)
+    const relatedArtistId = relatedArtists.map((artist) => artist.id)
     const artistObject = [
       {
-        id: search,
+        id: relatedArtistId,
         artist: relatedArtist,
         image: artistImage,
-        name: search
+        name: search,
+        popularity: relatedArtistPopularity,
+        mainSource: relatedArtistPopularity[0],
+        mainId: relatedArtistId[0]
       }
     ]
 
@@ -191,7 +200,7 @@ function Artist() {
     if (existingDataJson) {
       existingData = JSON.parse(existingDataJson)
     }
-
+    // @ts-ignore
     const newData = existingData.concat(artistObject) // Concatenate the existing data with the new artist object
 
     // Store the updated data in Local Storage
@@ -202,7 +211,9 @@ function Artist() {
 
   const handleGetData = async () => {
     try {
-      const result = await getData()
+      const artistId = await getArtist()
+      // @ts-ignore
+      const result = await getData(artistId)
 
       setData(result)
       setLoading(false)
@@ -288,6 +299,7 @@ function Artist() {
                       >
                         {artist.name}
                       </Badge>
+                      <div>{artist.popularity}</div>
                     </div>
                   ))}
                 </div>
