@@ -36,8 +36,6 @@ songs. We have a large database of songs and artist that you can search through 
 find similar music to your favorite songs. we also have a database of artist that
 you can search through to find similar music to your favorite artist.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 # 🔮 What’s inside?
 
 ### 📜 Stack
@@ -77,7 +75,7 @@ you can search through to find similar music to your favorite artist.
 
 1.  [SoundCloud Developers](https://developers.soundcloud.com/docs/api/guide#authentication 'SoundCloud Developers') - SoundCloud's official documentation for developers, specifically the section on authentication.
 2.  [Spotify Developers](https://developer.spotify.com/documentation/web-api/tutorials/getting-started) - Spotify's official documentation for developers, specifically the section on authentication.
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 # Optimizations
 There is still a long way to go. I still have a lot of design choices ahead of me, such as the mobile responsiveness of the site among many other changes.
@@ -95,3 +93,5 @@ There is still a long way to go. I still have a lot of design choices ahead of m
 
 # Lessons Learned:
 I have deepened my understanding of authentication and Typescript most of all. I started out by fully typing out the routes for authentication manually without Clerk. This let me fully appreciate all that clerk does to ease the process of auth.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
