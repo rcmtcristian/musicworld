@@ -50,6 +50,7 @@ you can search through to find similar music to your favorite artist.
 - 🎨 [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework.
 - 🎨 [SCSS](https://sass-lang.com/documentation) - A popular CSS preprocessor.
 - 🔺 [Vercel](https://vercel.com/) - Deploy your application on Vercel.
+- ⚙️ [MongoDB](https://www.mongodb.com/) - Database
 
 ### 📜 Dependencies
 
