@@ -78,3 +78,20 @@ you can search through to find similar music to your favorite artist.
 1.  [SoundCloud Developers](https://developers.soundcloud.com/docs/api/guide#authentication 'SoundCloud Developers') - SoundCloud's official documentation for developers, specifically the section on authentication.
 2.  [Spotify Developers](https://developer.spotify.com/documentation/web-api/tutorials/getting-started) - Spotify's official documentation for developers, specifically the section on authentication.
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+# Optimizations
+There is still a long way to go. I still have a lot of design choices ahead of me, such as the mobile responsiveness of the site among many other changes.
+
+>  Validation and filtering: Verifying that the incoming data conforms to the expected format and meets certain criteria. This can involve checking data types, length limits, or specific patterns. For instance, ensuring that an email address follows a valid format or that a numeric value is within an acceptable range.
+
+>  Sanitize the data: To sanitize incoming data means to clean and validate the data before processing or storing it in a system. The process of sanitizing data aims to prevent or mitigate potential security risks, such as injection attacks, cross-site scripting (XSS), or other forms of malicious activities that exploit vulnerabilities in the system.
+
+> Exporting: Allow the user to automatically export the artist list into a spotify playlist in their account
+
+> 3D assets: Migrate from spline to Three.js for the 3d scenes as they will reduce the blocking time by a large margin. Will most likely be using react 3 fiber for the most smooth transition
+
+> DB: Migrate the current database to SQL 
+
+
+# Lessons Learned:
+I have deepened my understanding of authentication and Typescript most of all. I started out by fully typing out the routes for authentication manually without Clerk. This let me fully appreciate all that clerk does to ease the process of auth.
