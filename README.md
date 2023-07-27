@@ -75,4 +75,5 @@ you can search through to find similar music to your favorite artist.
 ### 📜 API's
 
 1.  [SoundCloud Developers](https://developers.soundcloud.com/docs/api/guide#authentication 'SoundCloud Developers') - SoundCloud's official documentation for developers, specifically the section on authentication.
+2.  [Spotify Developers](https://developer.spotify.com/documentation/web-api/tutorials/getting-started) - Spotify's official documentation for developers, specifically the section on authentication.
 <p align="right">(<a href="#top">back to top</a>)</p>
