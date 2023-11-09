@@ -1,0 +1,12 @@
+name: musicworld
+packages:
+  - path: client\styles
+  - path: client\src
+  - path: lib
+  - path: server\config
+  - path: server\controllers
+  - path: server\middleware
+  - path: server\models
+  - path: server\routes
+language: javascript
+appmap_dir: tmp/appmap
