@@ -203,7 +203,7 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 85%;
+  width: 100%;
   height: 100%;
   margin-top: -9em;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -356,12 +356,15 @@ input {
   width: 100%;
   height: 10vh;
   padding: 0 1em;
+  font: clamp(0.4rem, 1vw, 0.6rem) $font-family_4;
   text-align: center;
   background: #403832;
 
   p {
     span {
-      font: 0.9rem $font-family_4;
+      // font: 0.6rem $font-family_4;
+      // font: clamp(0.5rem, 1vw, 0.6rem) $font-family_4;
+
       color: $color_8;
     }
   }
@@ -595,49 +598,8 @@ canvas {
     width: 100%;
   }
 }
+// @media (max-width: 390px) {
 
-// XX-Small devices (portrait phones, less than 576px)
-// @media screen and (max-height: 380px) {
-//   #title-shaping {
-//     margin-bottom: 0.5em;
-//     font-family: $font-family_1;
-//     font-weight: 600;
-//     // font-size: clamp(100px, calc(30% / 2rem + 10px), 900px);
-//     font-size: clamp(1rem, 1vw, 1rem);
-//     color: $color_1;
-//   }
-
-//   #title-care {
-//     width: 100%;
-//     margin-bottom: 0.5em;
-//     margin-left: 0.2em;
-//     // font-size: clamp(100px, calc(30% / 2rem + 10px), 900px);
-//     font-size: clamp(1rem, 1vw, 1rem);
-//     font-family: $font-family_1;
-//     font-weight: 600;
-//     color: $color_1;
-//   }
-
-//   #title-care > span {
-//     margin-top: -10em;
-//   }
-
-//   .hero-title {
-//     width: 100%;
-//     margin-left: 0em;
-//   }
-// }
-// @media screen and (max-width: 750px) {
-//   .container-two {
-//     grid-template-rows: 1.5fr 3fr;
-//     grid-template-columns: 1fr;
-//     width: 90vw;
-//   }
-
-//   .form-panel {
-//     order: 2;
-//     padding: 10px 20px 20px;
-//   }
 // }
 
 // X-Small devices (portrait phones, less than 576px)
@@ -772,7 +734,7 @@ canvas {
 
     p {
       span {
-        font: 0.7rem $font-family_4;
+        // font: 0.7rem $font-family_4;
         color: $color_8;
       }
     }
@@ -938,20 +900,21 @@ canvas {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
+    font: clamp(0.5rem, 1vw, 0.6rem) $font-family_4;
     text-align: center;
     background: #403832;
 
     p {
       span {
-        font: 0.7rem $font-family_4;
+        // font: 0.7rem $font-family_4;
         color: $color_8;
       }
     }
 
     .footer-container-bottom,
     a {
-      font: 0.7rem $font-family_4;
+      font: clamp(0.5rem, 1vw, 0.6rem) $font-family_4;
       color: $color_8;
       cursor: pointer;
     }
@@ -1084,15 +1047,240 @@ canvas {
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
-  .left {
-    color: var($background-color_4);
+  .link {
+    z-index: 10;
+    display: inline-block;
+    width: 10rem;
+    height: 9.2rem;
+    margin-top: 1em;
+    font: 300 1rem/1.4 $font-family_4;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1175em;
+    word-spacing: 0.3em;
+
+    &-text {
+      font-family: $font-family_2;
+      font-size: clamp(0.7rem, 1.2vw, 1.04rem);
+      transform-origin: 50% 50%;
+      animation: rotate-reverse normal infinite $rotationDuration linear;
+    }
+  }
+
+  #title-shaping {
+    margin-bottom: 0.5em;
+    font-family: $font-family_1;
+    font-size: clamp(2.7rem, 9vw, 9rem);
+    color: $color_1;
+  }
+
+  #title-care {
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-left: 0.2em;
+    font-family: $font-family_1;
+    font-size: clamp(2.7rem, 9vw, 9rem);
+    font-weight: 600;
+    color: $color_1;
+  }
+
+  #title-care > span {
+    margin-top: -10em;
+  }
+
+  .hero-title {
+    // width: 100%;
+    // width: min(1200px, (100% - 2em));
+    margin: auto;
+  }
+
+  svg {
+    display: inline-block;
+    width: 4%;
+    height: 10%;
+    margin: 0 1em;
+  }
+
+  // controlls direct size of svg in the hero section
+  .svg-title {
+    display: inline-block;
+    width: 20%;
+    padding: 0 1em;
+    // margin-bottom: -1em;
+  }
+
+  .main-section {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 9vh;
+    opacity: 4;
+  }
+
+  .main-container {
+    margin-top: 23vh;
+  }
+
+  .sub-second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // margin-top: 3em;
+    text-align: center;
+
+    p {
+      width: 95%;
+      height: 100%;
+      font-family: $font-family_2;
+      font-size: clamp(0.8rem, 2.5vw, 2rem);
+    }
+
+    .sub-second-section-container {
+      > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // margin-top: 3em;
+        text-align: center;
+      }
+    }
   }
 }
 
 // X-Large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) {
-  .left {
-    color: var($background-color_4);
+  .link {
+    z-index: 10;
+    display: inline-block;
+    width: 6.6rem;
+    height: 9.2rem;
+    margin-top: 1em;
+    font: 300 1rem/1.4 $font-family_4;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1175em;
+    word-spacing: 0.3em;
+
+    &-text {
+      font-family: $font-family_2;
+      font-size: clamp(0.7rem, 1vw, 1.04rem);
+      transform-origin: 50% 50%;
+      animation: rotate-reverse normal infinite $rotationDuration linear;
+    }
+  }
+
+  #title-shaping {
+    margin-bottom: 0.5em;
+    font-family: $font-family_1;
+    font-size: clamp(2.7rem, 6vw, 9rem);
+    color: $color_1;
+  }
+
+  #title-care {
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-left: 0.2em;
+    font-family: $font-family_1;
+    font-size: clamp(2.7rem, 6vw, 9rem);
+    font-weight: 600;
+    color: $color_1;
+  }
+
+  #title-care > span {
+    margin-top: -10em;
+  }
+
+  .hero-title {
+    padding-left: 2em;
+    // width: 100%;
+    // width: min(1200px, (100% - 2em));
+    margin: auto;
+  }
+
+  svg {
+    display: inline-block;
+    width: 4%;
+    height: 10%;
+    margin: 0 1em;
+  }
+
+  // controlls direct size of svg in the hero section
+  .svg-title {
+    display: inline-block;
+    width: 20%;
+    padding: 0 1em;
+    // margin-bottom: -1em;
+  }
+
+  .main-section {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 9vh;
+    opacity: 4;
+  }
+
+  .main-container {
+    margin-top: 23vh;
+  }
+
+  .sub-second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // margin-top: 3em;
+    text-align: center;
+
+    p {
+      width: 80%;
+      height: 100%;
+      font-family: $font-family_2;
+      font-size: clamp(0.8rem, 1.2vw, 2rem);
+    }
+
+    .sub-second-section-container {
+      > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // margin-top: 3em;
+        text-align: center;
+      }
+    }
+  }
+
+  .footer-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 11vh;
+    font: clamp(0.5rem, 1vw, 0.6rem) $font-family_4;
+    text-align: center;
+    background: #403832;
+
+    p {
+      span {
+        // font: 0.7rem $font-family_4;
+        color: $color_8;
+      }
+    }
+
+    .footer-container-bottom,
+    a {
+      font: clamp(0.5rem, 1vw, 0.6rem) $font-family_4;
+      color: $color_8;
+      cursor: pointer;
+    }
   }
 }
 
