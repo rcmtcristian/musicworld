@@ -257,7 +257,6 @@ svg {
   margin-left: 0.2em;
   font-family: $font-family_1;
   font-size: clamp(2.7rem, 7vw, 9rem);
-  // font-size: clamp(100px, calc(30% / 2rem + 10px), 900px);
   font-weight: 600;
   color: $color_1;
 }
@@ -598,9 +597,6 @@ canvas {
     width: 100%;
   }
 }
-// @media (max-width: 390px) {
-
-// }
 
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
@@ -697,7 +693,6 @@ canvas {
     align-items: center;
     width: 100%;
     height: 100%;
-    // margin-top: 3em;
     text-align: center;
 
     p {
@@ -751,8 +746,6 @@ canvas {
     display: flex;
     flex-direction: column;
     width: 100%;
-    // height: 60%;
-    // margin-top: 10%;
   }
 
   .main-section {
@@ -822,7 +815,6 @@ canvas {
   }
 
   .hero-title {
-    // width: 100%;
     // width: min(1200px, (100% - 2em));
     margin: auto;
   }
