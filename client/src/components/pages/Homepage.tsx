@@ -9,22 +9,53 @@ import The from '@/Images/The.svg'
 import Star from '@/Images/star-thicc.svg'
 
 function Homepage() {
-  return (
-    <main className=" min-h-screen place-content-center relative ">
-      <Nav />
+  // const canvas = document.getElementById('canvas3d')
 
-      <section className="main-section ">
-        <main className="main-container" data-barba="container" data-barba-namespace="home">
+  // async function loadScene(canvas) {
+  //   if (canvas instanceof HTMLCanvasElement) {
+  //     const app = new Application(canvas)
+  //     await app.load('client/src/assets/scenes/scene.splinecode')
+  //   } else {
+  //     console.error('Canvas element not found or is not an HTMLCanvasElement')
+  //   }
+  // }
+  // loadScene(canvas)
+
+  return (
+    <main className=" min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800">
+      <Nav />
+      {/* <main className="grid min-h-screen place-content-center bg-gradient-to-b from-blue-700 to-blue-800"> */}
+      <ul className="transition">
+        <li>loading</li>
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+      </ul>
+      {/*
+      <div className="overlay">
+        <div className="overlay-loader">
+          <canvas id="canvas">
+            <p>Alternative content</p>
+          </canvas>
+        </div>
+      </div> */}
+      {/* <canvas id="canvas3d"></canvas> */}
+      <section className="main-section wrapper">
+        <header />
+
+        <main data-barba="container" data-barba-namespace="home">
           <section className="separator">
             <section className="sub-main-section ">
               <h1 className="hero-title">
-                <span className="left" id="title-shaping">
+                <span id="title-shaping" className="left">
                   Mapping
                 </span>
-                <img alt="the" className="svg-title" src={The} />
+                <img src={The} className="svg-title" alt="the" />
                 <br />
-                <span className="second-title-container">
-                  <img alt="star" className="svg-title star-ajust" src={Star} />
+                <span className="">
+                  <img src={Star} className="svg-title star-ajust" alt="star" />
                   <span id="title-care">
                     <span className="left">Music World</span>
                   </span>
@@ -41,7 +72,9 @@ function Homepage() {
                 </span>
               </p>
 
-
+              {/*
+        <!- call to action  ->
+        */}
               <div className="sub-second-section-container">
                 <div className="sub-second-section-container-left">
                   <p>
@@ -69,11 +102,11 @@ function Homepage() {
                         </desc>
 
                         <path
+                          id="link-circle-alt"
                           className="link-path"
                           d="M 35, 100 a 65,65 0 1,1 130,0 a 65,65 0 1,1 -130,0"
-                          fill="none"
-                          id="link-circle-alt"
                           stroke="none"
+                          fill="none"
                         />
 
                         <path
