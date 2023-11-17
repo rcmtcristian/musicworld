@@ -25,6 +25,14 @@ $background-color_3: rgb(0 0 0 / 0%);
 $background-color_4: #f44336;
 $background-color_5: #dad0c1;
 $border-bottom-color_1: var(-accent-color);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 @import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
