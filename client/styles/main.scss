@@ -303,8 +303,8 @@ input {
 .picture-panel {
   width: 50vw;
   overflow-x: auto;
-  background: url('/client/src/assets/images/squares.png');
-  filter: blur(1px);
+  background: url('/client/src/assets/images/side-panel-graphic-frame-v2.png');
+  // filter: blur(1px);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -312,7 +312,7 @@ input {
   width: 50vw;
   overflow-x: auto;
   overflow-y: hidden;
-  background: url('/client/src/assets/images/signup-panel.png');
+  background: url('/client/src/assets/images/side-panel-graphic-singup.png');
   filter: blur(1px);
   background-repeat: no-repeat;
   background-size: cover;
