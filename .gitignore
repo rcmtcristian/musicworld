@@ -152,8 +152,8 @@ dist
 *.scss.map
 
 # css
-client/src/styles/**/*.css
-client/src/styles/**/*.css.map
+client/styles/**/*.css
+client/styles/**/*.css.map
 
 
 .vercel
