@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
 import '../../client/styles/main.css'
-
+import React from 'react'
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -69,6 +68,9 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
 
   return (
     <div className="main-table h-screen rounded-md border ">
+      <div className="mobile-cover">
+        <h1>Mobile View is still under developement</h1>
+      </div>
       <div className="flex items-center justify-center">
         <h1 className="artist-header">Artist List</h1>
         <img alt="" className=" h-10" src="../../client/src/assets/images/Group.svg" />

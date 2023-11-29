@@ -71,3 +71,15 @@
   background: $background-color_5;
   border-bottom: $color_10 solid 2px;
 }
+
+@media (max-width: 1199.98px) {
+  .artist {
+    ul {
+      visibility: hidden;
+    }
+
+    .signOutMobile {
+      visibility: visible;
+    }
+  }
+}

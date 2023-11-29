@@ -98,6 +98,9 @@ function GroupView() {
 
   return (
     <main className="artist-table-container">
+      <div className="mobile-cover">
+        <h1>Mobile View is still under developement</h1>
+      </div>
       <div className="main">
         <ForceGraph
           linksData={structuredData.links}

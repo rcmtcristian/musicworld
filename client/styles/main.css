@@ -118,6 +118,14 @@
   border-bottom: #db856a solid 2px;
 }
 
+@media (max-width: 1199.98px) {
+  .artist ul {
+    visibility: hidden;
+  }
+  .artist .signOutMobile {
+    visibility: visible;
+  }
+}
 @font-face {
   font-family: CascadiaCodePL;
   font-weight: 400;
@@ -373,6 +381,20 @@
   background-color: #fff;
 }
 
+.mobile-cover {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.mobile-cover h1 {
+  margin-top: 5rem;
+  font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', geneva, verdana, sans-serif;
+  font-size: 2.5rem;
+  color: #3d3535;
+  text-align: center;
+}
+
 .Content-table th,
 .Content-table td {
   padding: 0.25rem 0.5rem;
@@ -557,6 +579,22 @@
   border: 1px solid #ddd;
 }
 
+@media (max-width: 1199.98px) {
+  .mobile-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font: 0.8rem;
+  }
+  .mobile-cover h1 {
+    margin-top: 5rem;
+    font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', geneva, verdana, sans-serif;
+    font-size: 2.5rem;
+    color: #3d3535;
+    text-align: center;
+  }
+}
 /* stylelint-disable no-duplicate-at-import-rules */
 /* stylelint-disable no-descending-specificity */
 @keyframes rotate {
