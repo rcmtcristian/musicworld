@@ -7,33 +7,39 @@
 @import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap';
 @font-face {
+  font-family: CascadiaCodePL;
+  font-weight: 400;
+  src: url('/fonts/CascadiaCodePL-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
   font-family: giselle;
   font-weight: 400;
-  src: url('../assets/fonts/FHGiselle-Regular.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Regular.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 600;
-  src: url('../assets/fonts//FHGiselle-Medium.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 800;
-  src: url('../assets/fonts/FHGiselle-Bold.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 600;
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 800;
-  src: url('https://www.display.care/static/fonts/Gilroy-Bold.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @keyframes rotate {
@@ -82,6 +88,7 @@
   border-bottom: #3d3535 solid 2px;
   transition: all 390ms ease;
 }
+
 .artist-table-container {
   position: absolute;
   top: 0;
@@ -100,42 +107,51 @@
   background-color: #524b4b;
   transform: translateX(-50%);
 }
+
 .icon-accent {
   background: #bfccd1;
 }
+
 .header-counter {
   color: #333;
   background: #dad0c1;
   border-bottom: #db856a solid 2px;
 }
+
+@font-face {
+  font-family: CascadiaCodePL;
+  font-weight: 400;
+  src: url('/fonts/CascadiaCodePL-Regular.woff2') format('woff2');
+  font-display: swap;
+}
 @font-face {
   font-family: giselle;
   font-weight: 400;
-  src: url('../assets/fonts/FHGiselle-Regular.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Regular.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 600;
-  src: url('../assets/fonts//FHGiselle-Medium.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 800;
-  src: url('../assets/fonts/FHGiselle-Bold.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 600;
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 800;
-  src: url('https://www.display.care/static/fonts/Gilroy-Bold.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @keyframes rotate {
@@ -155,6 +171,7 @@
   height: 100%;
   padding-top: 9em;
   margin: 0;
+  background-color: #fffaee;
   box-shadow: none;
 }
 .cl-card .cl-header {
@@ -178,9 +195,9 @@
     'Lucida Sans Unicode', geneva, verdana, sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #3d3535;
+  color: #f7e9d6;
   cursor: pointer;
-  background-color: #f7e9d6;
+  background-color: #403832;
   border: none;
   border-radius: 5px;
 }
@@ -204,6 +221,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+.cl-card .cl-internal-1vbdq0x {
+  color: #3d3535;
+}
+.cl-card .cl-socialButtonsBlockButton {
+  background: rgba(0, 0, 0, 0);
+  border: 1.5px solid #3d3535;
+}
+.cl-card .cl-socialButtonsBlockButton .cl-socialButtonsBlockButtonText {
+  color: #3d3535;
+}
 .cl-card .cl-footerActionText {
   font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', geneva, verdana, sans-serif;
@@ -219,46 +246,65 @@
 .cl-card .cl-internal-b3fm6y {
   display: none;
 }
+
 .artist .cl-rootBox {
   margin-top: 1px;
 }
+
 .cl-userButton-popover {
   height: 60%;
 }
+
 .cl-userButtonPopoverCard {
   height: 60%;
 }
+
 .cl-userButtonPopoverMain {
   display: grid;
+}
+
+@media (max-width: 1199.98px) {
+  .cl-card {
+    display: flex;
+    padding-top: 9em;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+@font-face {
+  font-family: CascadiaCodePL;
+  font-weight: 400;
+  src: url('/fonts/CascadiaCodePL-Regular.woff2') format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 400;
-  src: url('../assets/fonts/FHGiselle-Regular.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Regular.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 600;
-  src: url('../assets/fonts//FHGiselle-Medium.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 800;
-  src: url('../assets/fonts/FHGiselle-Bold.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 600;
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 800;
-  src: url('https://www.display.care/static/fonts/Gilroy-Bold.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @keyframes rotate {
@@ -272,33 +318,39 @@
   }
 }
 @font-face {
+  font-family: CascadiaCodePL;
+  font-weight: 400;
+  src: url('/fonts/CascadiaCodePL-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
   font-family: giselle;
   font-weight: 400;
-  src: url('../assets/fonts/FHGiselle-Regular.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Regular.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 600;
-  src: url('../assets/fonts//FHGiselle-Medium.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: giselle;
   font-weight: 800;
-  src: url('../assets/fonts/FHGiselle-Bold.woff2') format('woff2');
+  src: url('/fonts/FHGiselle-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 600;
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: gilroy;
   font-weight: 800;
-  src: url('https://www.display.care/static/fonts/Gilroy-Bold.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
   font-display: swap;
 }
 @keyframes rotate {
@@ -320,36 +372,45 @@
   border-collapse: collapse;
   background-color: #fff;
 }
+
 .Content-table th,
 .Content-table td {
   padding: 0.25rem 0.5rem;
 }
+
 .Content-table th {
   display: none;
 }
+
 .Content-table td {
   display: block;
 }
+
 .Content-table thead th,
 .Content-table tbody td {
   text-align: center;
   vertical-align: middle;
 }
+
 .Content-table tbody {
   border: 1px solid #e5e5e5;
   transition: all 0.333s ease;
 }
+
 .Content-table tbody td {
   border: 1px solid #e5e5e5;
   transition: all 0.333s ease;
 }
+
 .Content-table a {
   color: #38487a;
   transition: all 0.333s ease;
 }
+
 .Content-table thead th sup {
   line-height: 0;
 }
+
 .Content-table thead th sup a {
   position: relative;
   top: 3px;
@@ -358,51 +419,61 @@
   font-size: 1.286em;
   font-weight: 700;
 }
+
 .Content-table a:hover {
   color: #be0000;
 }
+
 .Content-table a[target='_blank']::after {
   display: inline-block;
   padding: 0 3px;
   font-family: 'DM Serif Display', serif, verdana, sans-serif;
   text-decoration: none;
-  content: '';
+  content: '\f03e';
 }
+
 .Content-table caption {
   margin: 0.5rem 0 16px;
   font-size: 4rem;
   font-weight: bold;
 }
+
 .Content-table p.fine-print {
   padding: 0.5rem 16px;
-  font-size: 11.023px;
+  font-size: 11.023px; /* line-height:1.333; */
   color: #666;
 }
+
 .Content-table thead tr th[scope='col'] {
   font-size: 13.625px;
   color: #333;
   border-color: #e5e5e5;
   border-style: solid;
-  border-width: 1px 1px 0;
+  border-width: 1px 1px 0; /* padding:.5rem 16px; */
 }
+
 .Content-table tbody tr td[class*='scale'] {
   height: 100px;
   border: 0;
 }
+
 .Content-table tbody tr td:last-child {
   width: 50%;
   padding: 4px 16px;
   line-height: 1.3;
   text-align: left;
 }
+
 .Content-table tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+
 .Content-table tbody td::before {
   display: inline-block;
   font-weight: bold;
   content: attr(data-th) ': ';
 }
+
 @media (max-width: 799px) {
   .Content-table {
     font-size: 13.625px;
@@ -485,6 +556,9 @@
   background: #fffaee;
   border: 1px solid #ddd;
 }
+
+/* stylelint-disable no-duplicate-at-import-rules */
+/* stylelint-disable no-descending-specificity */
 @keyframes rotate {
   to {
     transform: rotate(360deg);
@@ -519,22 +593,26 @@
   color: #403832;
   vertical-align: baseline;
 }
+
 body {
   overflow: hidden;
   background: #f7e9d6;
   background-image: url('data:image/png;base64,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');
 }
+
 .main-section {
   width: 100%;
   height: 100%;
   padding-bottom: 10vh;
   opacity: 4;
 }
+
 li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 header {
   display: flex;
   flex-direction: row;
@@ -543,10 +621,12 @@ header {
   padding: 0.8em;
   background-color: #403832;
 }
+
 .no-match p,
 h1 {
   color: #fff;
 }
+
 .centered {
   position: absolute;
   top: 12%;
@@ -555,6 +635,7 @@ h1 {
   text-align: center;
   transform: translate(0%, -50%);
 }
+
 #title {
   z-index: 3;
   width: 50vw;
@@ -571,9 +652,11 @@ h1 {
   color: #fff;
   filter: blur(1px);
 }
+
 .main-container {
   margin-top: 10%;
 }
+
 .smile-container {
   position: absolute;
   top: 56.34em;
@@ -585,6 +668,7 @@ h1 {
   background-position: center;
   background-size: cover;
 }
+
 .graph {
   display: flex;
   flex-direction: column;
@@ -599,9 +683,11 @@ h1 {
   color: #403832;
   text-align: center;
 }
+
 header * {
   z-index: 8;
 }
+
 header nav li > a {
   position: relative;
   display: inline-block;
@@ -612,6 +698,7 @@ header nav li > a {
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
+
 header nav li > a::after {
   position: absolute;
   bottom: 0;
@@ -624,10 +711,12 @@ header nav li > a::after {
   background: #f7e9d6;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
+
 header nav li > a:hover::after {
   left: 0;
   width: 100%;
 }
+
 .form-panel {
   width: 50vw;
   padding: 10vh 5vw;
@@ -642,6 +731,7 @@ header nav li > a:hover::after {
   color: #403832;
   text-decoration: none;
 }
+
 ul {
   display: flex;
   flex-direction: row;
@@ -652,12 +742,14 @@ ul {
     'Lucida Grande', 'Lucida Sans Unicode', geneva, verdana, sans-serif;
   list-style: none;
 }
+
 .separator {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
+
 .sub-main-section {
   display: flex;
   flex-direction: row;
@@ -669,20 +761,24 @@ ul {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
+
 svg {
   display: inline-block;
   width: 7%;
   height: 50%;
   margin: 0 1em;
 }
+
 .svg-title {
   display: inline-block;
   padding: 0 1em;
 }
+
 .star-ajust {
   z-index: 2 !important;
   margin-top: -5em;
 }
+
 #canvas3d {
   position: absolute;
   top: 0;
@@ -693,9 +789,11 @@ svg {
   padding: 0;
   margin: 0;
 }
+
 .hero-title {
   margin: auto;
 }
+
 #title-shaping {
   margin-bottom: 0.5em;
   font-family: 'DM Serif Display', serif, verdana, sans-serif;
@@ -703,6 +801,7 @@ svg {
   font-weight: 600;
   color: #403832;
 }
+
 #title-care {
   margin-bottom: 0.5em;
   margin-left: 0.2em;
@@ -711,6 +810,7 @@ svg {
   font-weight: 600;
   color: #403832;
 }
+
 .sub-second-section {
   display: flex;
   flex-direction: column;
@@ -735,9 +835,11 @@ svg {
   margin-top: 3em;
   text-align: center;
 }
+
 input {
   color: #333;
 }
+
 .container-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -746,6 +848,7 @@ input {
   background-color: #fffaee;
   box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
+
 .picture-panel {
   width: 50vw;
   overflow-x: auto;
@@ -754,6 +857,7 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .picture-panel-2 {
   width: 50vw;
   overflow-x: auto;
@@ -763,6 +867,7 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .btn {
   display: inline-block;
   width: 100%;
@@ -780,9 +885,11 @@ input {
 .btn:active {
   transform: scale(0.98);
 }
+
 .text {
   margin-top: 30px;
 }
+
 .footer-container {
   position: absolute;
   bottom: 0;
@@ -814,6 +921,7 @@ input {
 .footer-container a {
   cursor: pointer;
 }
+
 .form-control {
   position: relative;
   width: 100%;
@@ -856,6 +964,7 @@ input {
   color: var(-accent-color);
   transform: translateY(-30px);
 }
+
 .char {
   font-family: giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
     geneva, verdana, sans-serif;
@@ -864,10 +973,12 @@ input {
   transition: transform 0.5s;
   transform: translateY(375px);
 }
+
 .left {
   display: inline-block;
   font-family: 'DM Serif Display', serif, verdana, sans-serif;
 }
+
 ul.transition {
   position: absolute;
   top: 0;
@@ -890,25 +1001,29 @@ ul.transition li {
   background: #403832;
   transform: scaleY(0);
 }
+
 .alert {
   z-index: 10;
   align-items: center;
   padding: 20px;
   margin-bottom: 15px;
   color: #fff;
-  background-color: #f44336;
+  background-color: #403832;
   opacity: 1;
   transition: opacity 0.6s;
 }
+
 .alert-danger {
   align-items: center;
   color: #fff;
-  background-color: #f44336;
+  background-color: #403832;
 }
+
 .accent-style {
   font-family: 'Josefin Sans', giselle, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', geneva, verdana, sans-serif;
 }
+
 .spline-ani {
   position: absolute;
   top: 0;
@@ -920,6 +1035,7 @@ ul.transition li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -932,14 +1048,17 @@ ul.transition li {
   justify-content: center;
   background-color: #dad0c1;
 }
+
 .overlay-loader {
   width: 400px;
   height: 400px;
 }
+
 canvas {
   width: 400px;
   height: 400px;
 }
+
 .link {
   z-index: 10;
   display: inline-block;
@@ -999,6 +1118,7 @@ canvas {
   left: 0;
   width: 100%;
 }
+
 @media (max-width: 575.98px) {
   body {
     overflow: visible;
@@ -1379,6 +1499,21 @@ canvas {
     font-size: clamp(0.7rem, 1.2vw, 1.04rem);
     transform-origin: 50% 50%;
     animation: rotate-reverse normal infinite 20s linear;
+  }
+  .picture-panel {
+    display: none;
+  }
+  .picture-panel-2 {
+    display: none;
+  }
+  .container-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    color: #333;
+    background-color: #fffaee;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
   }
   #title-shaping {
     margin-bottom: 0.5em;

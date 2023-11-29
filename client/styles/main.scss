@@ -1056,6 +1056,24 @@ canvas {
     }
   }
 
+  .picture-panel {
+    display: none;
+  }
+
+  .picture-panel-2 {
+    display: none;
+  }
+
+  .container-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    color: $color_3;
+    background-color: $background-color_2;
+    box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
+  }
+
   #title-shaping {
     margin-bottom: 0.5em;
     font-family: $font-family_1;
